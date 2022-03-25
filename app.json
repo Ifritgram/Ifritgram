@@ -1,0 +1,38 @@
+{
+    "name": "Ridogram",
+    "description": "Ridogram is an advanced multi-featured Telegram UserBot built into Python using the Telethon.",
+    "logo": "https://telegra.ph/file/5f0e2d045243c6ab2a4a0.jpg",
+    "keywords": [
+      "userbot",
+      "plugins",
+      "modules",
+      "productivity"
+    ],
+    "repository": "https://github.com/theridwanul/Ridogram",
+    "env": {
+      "api_id": {
+        "description": "Collect this value from my.telegram.org and do not share it with anyone.",
+        "value": "",
+        "required": true
+      },
+      "api_hash": {
+        "description": "Collect this value from my.telegram.org and do not share it with anyone.",
+        "value": "",
+        "required": true
+      },
+      "string": {
+        "description": "Collect this value by running python3 stringsession.py locally or generate from https://replit.com/@theridwanul/stringsession and do not share it with anyone.",
+        "value": "",
+        "required": true
+      }
+    },
+    "buildpacks": [{
+        "url": "heroku/python"
+      },{
+        "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+    },{
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-chromedriver"
+}]
+  }
