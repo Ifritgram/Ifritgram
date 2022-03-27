@@ -15,7 +15,7 @@ async def runb64(event):
             encodesecretmessagebytes = encodesecretmessage.decode("ascii")
             await event.edit("Encrypting...")
             sleep(2)
-            await event.edit(f"Secret Message: {encodesecretmessagebytes}")
+            await event.edit(f"{encodesecretmessagebytes}")
         elif options[1] == "de":
             secretkey = selectsecretmessage.message
             secretkeybytes = secretkey.encode("ascii")
