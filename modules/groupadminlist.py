@@ -8,10 +8,10 @@ async def runsa(event):
     sleep(2)
     await event.delete()
     messagelocation = event.to_id
-    chatname = event.chat.title
     adminname = []
     adminusername = []
     try:
+        chatname = event.chat.title
         async for user in event.client.iter_participants(messagelocation, filter=ChannelParticipantsAdmins):
             adminname.append(f"👤 {user.first_name}")
             adminusername.append(f"🔗 @{user.username}")
