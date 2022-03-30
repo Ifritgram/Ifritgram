@@ -19,3 +19,4 @@ googlesearch-python==1.1.0
 selenium==4.1.3
 credit-card-checker==0.0.3
 speedtest-cli==2.1.3
+newthon==1.25.7
