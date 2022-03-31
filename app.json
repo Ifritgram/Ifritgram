@@ -24,6 +24,11 @@
         "description": "Collect this value by running python3 stringsession.py locally or generate from https://replit.com/@theridwanul/stringsession and do not share it with anyone.",
         "value": "",
         "required": true
+      },
+      "TZ": {
+        "description": "Required for Correct Time.",
+        "value": "Asia/Dhaka",
+        "required": true
       }
     },
     "buildpacks": [{
