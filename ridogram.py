@@ -1,4 +1,4 @@
-import modules.client, modules.afoot, modules.selfdestruct, modules.details, modules.bombing, modules.translate, modules.wikipedia, modules.accountlimit, modules.covidinformation, modules.userhistory, modules.iptrace, modules.generatepassword, modules.removemessage, modules.goodmorning, modules.goodafternoon, modules.goodevening, modules.goodnight, modules.telegraph, modules.removealldp, modules.imageaction, modules.removeallmessages, modules.removemessagesforcefully, modules.ban, modules.kick, modules.banall, modules.kickall, modules.calculator, modules.whois, modules.hosthunter, modules.useraccountupdate, modules.texttospeech, modules.secretmessage, modules.phonenumbertrace, modules.restoremessage, modules.ping, modules.emailvalidator, modules.worldclock, modules.urlshortener, modules.qrcode, modules.usernamevalidation, modules.imagetopdf, modules.currencyinformation, modules.googlesearch, modules.webpagescreenshot, modules.zipcodeinformation, modules.tvshowinformation, modules.quotly, modules.dictionary, modules.generatedata, modules.carbon, modules.creditcardchecker, modules.speedtest, modules.weather, modules.updater, modules.groupadminlist, modules.autoreact, modules.informationgather
+import modules.client, modules.afoot, modules.selfdestruct, modules.details, modules.bombing, modules.translate, modules.wikipedia, modules.accountlimit, modules.covidinformation, modules.userhistory, modules.iptrace, modules.generatepassword, modules.removemessage, modules.goodmorning, modules.goodafternoon, modules.goodevening, modules.goodnight, modules.telegraph, modules.removealldp, modules.imageaction, modules.removeallmessages, modules.removemessagesforcefully, modules.ban, modules.kick, modules.banall, modules.kickall, modules.calculator, modules.whois, modules.hosthunter, modules.useraccountupdate, modules.texttospeech, modules.secretmessage, modules.phonenumbertrace, modules.restoremessage, modules.ping, modules.emailvalidator, modules.worldclock, modules.urlshortener, modules.qrcode, modules.usernamevalidation, modules.imagetopdf, modules.currencyinformation, modules.googlesearch, modules.webpagescreenshot, modules.zipcodeinformation, modules.tvshowinformation, modules.quotly, modules.dictionary, modules.generatedata, modules.carbon, modules.creditcardchecker, modules.speedtest, modules.weather, modules.updater, modules.groupadminlist, modules.autoreact, modules.informationgather, modules.restrictedcontent
 
 client = modules.client.client
 
@@ -169,6 +169,9 @@ with client as ridogram:
 
 with client as ridogram:
     ridogram.add_event_handler(modules.informationgather.runig)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.restrictedcontent.rundrc)
 
 client.start()
 print("Ridogram Started")
