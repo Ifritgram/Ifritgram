@@ -1,4 +1,4 @@
-import modules.client, modules.afoot, modules.selfdestruct, modules.details, modules.bombing, modules.translate, modules.wikipedia, modules.accountlimit, modules.covidinformation, modules.userhistory, modules.iptrace, modules.generatepassword, modules.removemessage, modules.goodmorning, modules.goodafternoon, modules.goodevening, modules.goodnight, modules.telegraph, modules.removealldp, modules.imageaction, modules.removeallmessages, modules.removemessagesforcefully, modules.ban, modules.kick, modules.banall, modules.kickall, modules.calculator, modules.whois, modules.hosthunter, modules.useraccountupdate, modules.texttospeech, modules.secretmessage, modules.phonenumbertrace, modules.restoremessage, modules.ping, modules.emailvalidator, modules.worldclock, modules.urlshortener, modules.qrcode, modules.usernamevalidation, modules.imagetopdf, modules.currencyinformation, modules.googlesearch, modules.webpagescreenshot, modules.zipcodeinformation, modules.tvshowinformation, modules.quotly, modules.dictionary, modules.generatedata, modules.carbon, modules.creditcardchecker, modules.speedtest, modules.weather, modules.updater, modules.groupadminlist, modules.autoreact, modules.informationgather, modules.restrictedcontent
+import modules.client, modules.afoot, modules.selfdestruct, modules.details, modules.bombing, modules.translate, modules.wikipedia, modules.accountlimit, modules.covidinformation, modules.userhistory, modules.iptrace, modules.generatepassword, modules.removemessage, modules.goodmorning, modules.goodafternoon, modules.goodevening, modules.goodnight, modules.telegraph, modules.removealldp, modules.imageaction, modules.removeallmessages, modules.removemessagesforcefully, modules.ban, modules.kick, modules.banall, modules.kickall, modules.calculator, modules.whois, modules.hosthunter, modules.useraccountupdate, modules.texttospeech, modules.secretmessage, modules.phonenumbertrace, modules.restoremessage, modules.ping, modules.emailvalidator, modules.worldclock, modules.urlshortener, modules.qrcode, modules.usernamevalidation, modules.imagetopdf, modules.currencyinformation, modules.googlesearch, modules.webpagescreenshot, modules.zipcodeinformation, modules.tvshowinformation, modules.quotly, modules.dictionary, modules.generatedata, modules.carbon, modules.creditcardchecker, modules.speedtest, modules.weather, modules.updater, modules.groupadminlist, modules.autoreact, modules.informationgather, modules.restrictedcontent, modules.pmprotection
 
 client = modules.client.client
 
@@ -172,6 +172,27 @@ with client as ridogram:
 
 with client as ridogram:
     ridogram.add_event_handler(modules.restrictedcontent.rundrc)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.runpmgmon)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.runpmgmoff)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.runpmgmstatus)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.runap)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.rununap)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.runpmapprovedlist)
+
+with client as ridogram:
+    ridogram.add_event_handler(modules.pmprotection.runpmguard)
 
 client.start()
 print("Ridogram Started")
