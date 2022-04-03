@@ -125,13 +125,22 @@ async def runpmguard(event):
         user = await event.get_chat()
         messagelocation = user.id
         blockimage = "http://telegra.ph/file/044cdfc719b352c7eb5e0.png"
+        senderinformation = await event.client(GetFullUserRequest(user.id))
+        itisbot = senderinformation.users[0].bot
+        isridogramuser = await event.get_sender()
         try:
             if "on" in protectionmode:
-                if user.id not in approvedusers:
-                    if user.id == ridogramuser:
-                        pass
-                    else:
-                        await event.client.send_file(messagelocation, blockimage, caption=f"Dear {user.first_name},\nThank you for sending me a message but I'm blocking you temporarily because I'm not allowing you to send me a message so please wait for my permission.")
-                    await event.client(functions.contacts.BlockRequest(user.id))
+                if itisbot == True:
+                    pass
+                else:
+                    if user.id not in approvedusers:
+                        if user.id == ridogramuser:
+                            pass
+                        else:
+                            if ridogramuser == isridogramuser.id:
+                                pass
+                            else:
+                                await event.client.send_file(messagelocation, blockimage, caption=f"Dear {user.first_name},\nThank you for sending me a message but I'm blocking you temporarily because I'm not allowing you to send me a message so please wait for my permission.")
+                                await event.client(functions.contacts.BlockRequest(user.id))
         except:
             pass
