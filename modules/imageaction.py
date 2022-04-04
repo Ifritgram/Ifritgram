@@ -17,7 +17,7 @@ async def runia(event):
                 getinformation = await event.get_reply_message()
                 targetid = getinformation.sender_id
                 targetdetails = await client(GetFullUserRequest(targetid))
-                userdp = await client.download_profile_photo(f"@{targetdetails.user.username}")
+                userdp = await client.download_profile_photo(f"@{targetdetails.users[0].username}")
                 await client.send_file(messagelocation, userdp)
                 remove(userdp)
             except:
