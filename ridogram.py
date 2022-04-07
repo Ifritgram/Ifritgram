@@ -206,6 +206,9 @@ with client as ridogram:
 with client as ridogram:
     ridogram.add_event_handler(modules.awayfromkeyboard.runafk)
 
+with client as ridogram:
+    ridogram.add_event_handler(modules.awayfromkeyboard.runmcfafk)
+
 client.start()
 print("Ridogram Started")
 client.run_until_disconnected()
