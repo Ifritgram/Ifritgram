@@ -21,7 +21,13 @@ async def runban(event):
     reason = bannedreason[0]
     try:
         await event.client.edit_permissions(messagelocation, targetuser, view_messages=False)
-        await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Banned\nReason: {reason}")
+        if reason:
+            if ".ban" in reason:
+                await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Banned")
+            else:
+                await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Banned\nReason: {reason}")
+        else:
+            await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Banned")
     except ValueError:
         await event.client.send_message(messagelocation, "It's Not A Supergroup")
     except:

@@ -77,7 +77,6 @@ async def runafk(event):
         senderinformation = await event.client(GetFullUserRequest(user.id))
         itisbot = senderinformation.users[0].bot
         isridogramuser = await event.get_sender()
-        afkimage = "https://telegra.ph/file/bc206d17d44613507f5a6.png"
         try:
             if "on" in afkmode:
                 if itisbot == True:
@@ -108,11 +107,11 @@ async def runafk(event):
                                 endtime += f"{sm}m {ss}s" if sm > 0 else f"{ss}s"
                             if runafkon.reason:
                                 if ".afkon" in runafkon.reason:
-                                    await event.client.send_file(messagelocation, afkimage, caption=f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                                    await event.client.send_message(messagelocation, f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
                                 else:
-                                    await event.client.send_file(messagelocation, afkimage, caption=f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                                    await event.client.send_message(messagelocation, f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
                             else:
-                                await event.client.send_file(messagelocation, afkimage, caption=f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                                await event.client.send_message(messagelocation, f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
         except:
             pass
 
@@ -121,7 +120,6 @@ async def runmcfafk(event):
     checkmention = event.mentioned
     messagelocation = event.to_id
     replylocation = event.id
-    afkimage = "https://telegra.ph/file/bc206d17d44613507f5a6.png"
     try:
         if "on" in afkmode:
             if checkmention == True:
@@ -144,10 +142,10 @@ async def runmcfafk(event):
                     endtime += f"{sm}m {ss}s" if sm > 0 else f"{ss}s"
                 if runafkon.reason:
                     if ".afkon" in runafkon.reason:
-                        await event.client.send_file(messagelocation, afkimage, caption=f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                        await event.client.send_message(messagelocation, f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
                     else:
-                        await event.client.send_file(messagelocation, afkimage, caption=f"I'm sorry, I can't come to the computer right now.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                        await event.client.send_message(messagelocation, f"I'm sorry, I can't come to the computer right now.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
                 else:
-                    await event.client.send_file(messagelocation, afkimage, caption=f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                    await event.client.send_message(messagelocation, f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
     except:
         pass

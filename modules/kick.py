@@ -21,6 +21,12 @@ async def runkick(event):
     client.parse_mode = "html"
     try:
         await event.client.kick_participant(messagelocation, getmessage.sender.id)
-        await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Kicked\nReason: {reason}")
+        if reason:
+            if ".kick" in reason:
+                await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Kicked")
+            else:
+                await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Kicked\nReason: {reason}")
+        else:
+            await event.client.send_message(messagelocation, f"<a href='tg://user?id={targetuser}'>{targetdetails.users[0].first_name}</a> Has Been Kicked")
     except:
         pass
