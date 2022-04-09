@@ -16,6 +16,11 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+<h2>Docker Build</h2>
+
+* `docker build -t ridogram .`
+* `docker run ridogram`
+
 <h2>Support</h2>
 <p title="Support">You can join us on any issue related to Ridogram Update and Support in Telegram.</p>
 <a href="https://t.me/ridogram" target="_blank"><img src="images/telegramchannelsupport.svg"/></a>
