@@ -17,9 +17,15 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 <h2>Docker Build</h2>
+<p title="Docker Build">Ridogram can be easily deployed by Docker, performing the following commands through terminal.</p>
 
 * `docker build -t ridogram .`
 * `docker run ridogram`
+
+<h2>Video Tutorial</h2>
+<p title="Video Tutorial">Ridogram can be easily deployed by watching this video.</p>
+
+[![Video Tutorial](images/howtodeployridogram.svg)](https://youtu.be/EO_XmAAjCng)
 
 <h2>Support</h2>
 <p title="Support">You can join us on any issue related to Ridogram Update and Support in Telegram.</p>
