@@ -1,7 +1,7 @@
 <h2>Ridogram</h2>
 <p title="Ridogram">Ridogram is an advanced multi-featured Telegram UserBot built into Python using the Telethon.</p>
 
-![](images/madebybangladesh.svg)
+![](images/madeinbangladesh.svg)
 ![](images/opensource.svg)
 ![](images/maintained.svg)
 ![](images/license.svg)
