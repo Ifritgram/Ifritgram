@@ -1,6 +1,6 @@
 {
     "name": "Ridogram",
-    "description": "Ridogram is an advanced multi-featured Telegram UserBot built into Python using the Telethon.",
+    "description": "Ridogram is an advanced multi-featured Telegram UserBot.",
     "logo": "https://telegra.ph/file/5f0e2d045243c6ab2a4a0.jpg",
     "keywords": [
       "userbot",
@@ -24,6 +24,16 @@
         "description": "Collect this value by running python3 stringsession.py locally or generate from https://replit.com/@theridwanul/stringsession and do not share it with anyone.",
         "value": "",
         "required": true
+      },
+      "pmlog_location": {
+        "description": "Enter the group ID of the place you want to collect private messages from.",
+        "value": "",
+        "required": false
+      },
+      "mentionlog_location": {
+        "description": "Enter the group ID of the place where you want to collect the mention message log.",
+        "value": "",
+        "required": false
       },
       "TZ": {
         "description": "Required for Correct Time.",
