@@ -239,6 +239,9 @@ with client as ridogram:
 with client as ridogram:
     ridogram.add_event_handler(modules.unban.rununban)
 
+with client as ridogram:
+    ridogram.add_event_handler(modules.details.runadls)
+
 client.start()
 print("Ridogram Started")
 client.run_until_disconnected()
