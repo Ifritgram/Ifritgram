@@ -242,6 +242,9 @@ with client as ridogram:
 with client as ridogram:
     ridogram.add_event_handler(modules.details.runadls)
 
+with client as ridogram:
+    ridogram.add_event_handler(modules.restrictedcontent.runrts)
+
 client.start()
 print("Ridogram Started")
 client.run_until_disconnected()
