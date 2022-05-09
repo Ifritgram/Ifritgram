@@ -4,7 +4,8 @@ import modules.client
 
 client = modules.client.client
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.sdmd'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.sdmd"))
 async def runsdmd(event):
     await event.delete()
     targetcontent = await event.get_reply_message()

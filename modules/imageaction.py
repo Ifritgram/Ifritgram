@@ -6,7 +6,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 client = modules.client.client
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.ia'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.ia"))
 async def runia(event):
     await event.delete()
     selectoption = event.message.raw_text.split()
@@ -17,23 +18,35 @@ async def runia(event):
                 getinformation = await event.get_reply_message()
                 targetid = getinformation.sender_id
                 targetdetails = await client(GetFullUserRequest(targetid))
-                userdp = await client.download_profile_photo(f"@{targetdetails.users[0].username}")
+                userdp = await client.download_profile_photo(
+                    f"@{targetdetails.users[0].username}"
+                )
                 await client.send_file(messagelocation, userdp)
                 remove(userdp)
             except:
-                await event.client.send_message(messagelocation, "Something Went Wrong")
+                await event.client.send_message(
+                    messagelocation, "Something Went Wrong"
+                )
         elif selectoption[1] == "blur":
             targetcontent = await event.get_reply_message()
             picturename = "blurbyridogram.png"
-            downloadtargetcontent = await event.client.download_media(targetcontent, picturename)
+            downloadtargetcontent = await event.client.download_media(
+                targetcontent, picturename
+            )
             bluramount = selectoption[2]
             try:
                 targetimage = Image.open(downloadtargetcontent)
-                blurredimage = targetimage.filter(ImageFilter.GaussianBlur(int(bluramount)))
+                blurredimage = targetimage.filter(
+                    ImageFilter.GaussianBlur(int(bluramount))
+                )
                 blurredimage.save(picturename)
                 send = await client.send_file(messagelocation, picturename)
                 remove(picturename)
             except:
-                await event.client.send_message(messagelocation, "Something Went Wrong")
+                await event.client.send_message(
+                    messagelocation, "Something Went Wrong"
+                )
     except:
-        await event.client.send_message(messagelocation, "Something Went Wrong")
+        await event.client.send_message(
+            messagelocation, "Something Went Wrong"
+        )

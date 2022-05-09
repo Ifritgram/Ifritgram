@@ -1,6 +1,7 @@
 from telethon import events
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.q'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.q"))
 async def runq(event):
     messagelocation = event.to_id
     repliedmessage = await event.get_reply_message()

@@ -2,6 +2,7 @@ from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
 import os
 
+
 @events.register(events.NewMessage)
 async def runpmlog(event):
     try:
@@ -24,11 +25,14 @@ async def runpmlog(event):
                             pass
                         else:
                             userdata = event.message
-                            await event.client.forward_messages(pmlog_location, userdata)
+                            await event.client.forward_messages(
+                                pmlog_location, userdata
+                            )
         else:
             pass
     except:
         pass
+
 
 @events.register(events.NewMessage)
 async def runmentionlog(event):
@@ -42,7 +46,10 @@ async def runmentionlog(event):
                 fromthisid = event.from_id.user_id
                 fetchinfo = await event.client(GetFullUserRequest(fromthisid))
                 fromthisuser = fetchinfo.users[0].first_name
-                await event.client.send_message(mentionlog_location, f"From: {update.title}\nUser: {fromthisuser}\nMessage: {mentiondata}")
+                await event.client.send_message(
+                    mentionlog_location,
+                    f"From: {update.title}\nUser: {fromthisuser}\nMessage: {mentiondata}",
+                )
         else:
             pass
     except:

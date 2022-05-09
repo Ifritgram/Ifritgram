@@ -5,7 +5,8 @@ from PIL import Image
 from time import sleep
 from os import remove
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.qrc'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.qrc"))
 async def runqrc(event):
     await event.edit("Processing...")
     sleep(2)
@@ -23,13 +24,20 @@ async def runqrc(event):
             remove(filename)
         elif selectoption[1] == "scan":
             targetqrcode = await event.get_reply_message()
-            downloadqrcode = await event.client.download_media(targetqrcode, qrcodename)
+            downloadqrcode = await event.client.download_media(
+                targetqrcode, qrcodename
+            )
             qrcodedecoder = decode(Image.open(qrcodename))
-            await event.client.send_message(messagelocation, f"QR Code Data: {qrcodedecoder[0].data.decode()}")
+            await event.client.send_message(
+                messagelocation,
+                f"QR Code Data: {qrcodedecoder[0].data.decode()}",
+            )
             remove(qrcodename)
         else:
             await event.client.send_message(messagelocation, "Wrong Option")
     except IndexError:
         await event.client.send_message(messagelocation, "Select An Option")
     except:
-        await event.client.send_message(messagelocation, "Something Went Wrong")
+        await event.client.send_message(
+            messagelocation, "Something Went Wrong"
+        )

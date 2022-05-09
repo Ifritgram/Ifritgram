@@ -2,7 +2,8 @@ from telethon import events
 from html_telegraph_poster.upload_images import upload_image
 from os import remove
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.tgu'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.tgu"))
 async def runtgu(event):
     await event.edit("Uploading...")
     getcontent = await event.get_reply_message()

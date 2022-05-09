@@ -1,6 +1,7 @@
 from telethon import events
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.fka'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.fka"))
 async def runfka(event):
     await event.delete()
     messagelocation = event.to_id

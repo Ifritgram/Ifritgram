@@ -5,7 +5,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 afkmode = set([])
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.afkon'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.afkon"))
 async def runafkon(event):
     await event.edit("Processing...")
     sleep(2)
@@ -21,15 +22,21 @@ async def runafkon(event):
                 afkmode.remove("off")
         afkmodeon = "on"
         if afkmodeon in afkmode:
-            await event.client.send_message(messagelocation, "AFK Mode Already Activated And Your Data Has Been Forcefully Updated")
+            await event.client.send_message(
+                messagelocation,
+                "AFK Mode Already Activated And Your Data Has Been Forcefully Updated",
+            )
         else:
             afkmode.add(afkmodeon)
             runafkon.start = datetime.now()
-            await event.client.send_message(messagelocation, "AFK Mode Successfully Activated")
+            await event.client.send_message(
+                messagelocation, "AFK Mode Successfully Activated"
+            )
     except:
         pass
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.afkoff'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.afkoff"))
 async def runafkoff(event):
     await event.edit("Processing...")
     sleep(2)
@@ -41,14 +48,19 @@ async def runafkoff(event):
             afkmode.remove("on")
             runafkon.afkreason.clear()
         if afkmodeoff in afkmode:
-            await event.client.send_message(messagelocation, "AFK Mode Already Deactivated")
+            await event.client.send_message(
+                messagelocation, "AFK Mode Already Deactivated"
+            )
         else:
             afkmode.add(afkmodeoff)
-            await event.client.send_message(messagelocation, "AFK Mode Successfully Deactivated")
+            await event.client.send_message(
+                messagelocation, "AFK Mode Successfully Deactivated"
+            )
     except:
         pass
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.afkstatus'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.afkstatus"))
 async def runafkstatus(event):
     await event.edit("Processing...")
     sleep(2)
@@ -60,11 +72,16 @@ async def runafkstatus(event):
             for details in afkmode:
                 statusinformation.append(details)
             convertdata = "\n".join(statusinformation)
-            await event.client.send_message(messagelocation, f"AFK Status: {convertdata.title()}")
+            await event.client.send_message(
+                messagelocation, f"AFK Status: {convertdata.title()}"
+            )
         else:
-            await event.client.send_message(messagelocation, "AFK Mode Is Off By Default")
+            await event.client.send_message(
+                messagelocation, "AFK Mode Is Off By Default"
+            )
     except:
         pass
+
 
 @events.register(events.NewMessage)
 async def runafk(event):
@@ -89,7 +106,7 @@ async def runafk(event):
                             pass
                         else:
                             end = datetime.now()
-                            total = (end - runafkon.start)
+                            total = end - runafkon.start
                             countthetime = int(total.seconds)
                             sd = countthetime // (24 * 3600)
                             countthetime %= 24 * 3600
@@ -104,16 +121,31 @@ async def runafk(event):
                             elif sh > 0:
                                 endtime += f"{sh}h {sm}m {ss}s"
                             else:
-                                endtime += f"{sm}m {ss}s" if sm > 0 else f"{ss}s"
+                                endtime += (
+                                    f"{sm}m {ss}s" if sm > 0 else f"{ss}s"
+                                )
                             if runafkon.reason:
                                 if ".afkon" in runafkon.reason:
-                                    await event.client.send_message(messagelocation, f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                                    await event.client.send_message(
+                                        messagelocation,
+                                        f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You",
+                                        reply_to=replylocation,
+                                    )
                                 else:
-                                    await event.client.send_message(messagelocation, f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                                    await event.client.send_message(
+                                        messagelocation,
+                                        f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You",
+                                        reply_to=replylocation,
+                                    )
                             else:
-                                await event.client.send_message(messagelocation, f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                                await event.client.send_message(
+                                    messagelocation,
+                                    f"Dear {user.first_name},\nI'm sorry, I can't come to the computer right now, please leave a message.\n\nLast Seen: {endtime}\n\nThank You",
+                                    reply_to=replylocation,
+                                )
         except:
             pass
+
 
 @events.register(events.NewMessage)
 async def runmcfafk(event):
@@ -124,7 +156,7 @@ async def runmcfafk(event):
         if "on" in afkmode:
             if checkmention == True:
                 end = datetime.now()
-                total = (end - runafkon.start)
+                total = end - runafkon.start
                 countthetime = int(total.seconds)
                 sd = countthetime // (24 * 3600)
                 countthetime %= 24 * 3600
@@ -142,10 +174,22 @@ async def runmcfafk(event):
                     endtime += f"{sm}m {ss}s" if sm > 0 else f"{ss}s"
                 if runafkon.reason:
                     if ".afkon" in runafkon.reason:
-                        await event.client.send_message(messagelocation, f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                        await event.client.send_message(
+                            messagelocation,
+                            f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You",
+                            reply_to=replylocation,
+                        )
                     else:
-                        await event.client.send_message(messagelocation, f"I'm sorry, I can't come to the computer right now.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                        await event.client.send_message(
+                            messagelocation,
+                            f"I'm sorry, I can't come to the computer right now.\n\nReason: {runafkon.reason}\nLast Seen: {endtime}\n\nThank You",
+                            reply_to=replylocation,
+                        )
                 else:
-                    await event.client.send_message(messagelocation, f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You", reply_to=replylocation)
+                    await event.client.send_message(
+                        messagelocation,
+                        f"I'm sorry, I can't come to the computer right now.\n\nLast Seen: {endtime}\n\nThank You",
+                        reply_to=replylocation,
+                    )
     except:
         pass

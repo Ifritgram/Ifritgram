@@ -1,7 +1,8 @@
 from telethon import events
 from os import system, remove
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.cpis'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.cpis"))
 async def runcpis(event):
     await event.edit("Processing...")
     try:
@@ -15,11 +16,15 @@ async def runcpis(event):
         datafile = open(userdatafile, "w")
         datafile.write(f"{fetchcontent.message}")
         datafile.close()
-        system(f"cat {userdatafile} | curl -F 'sprunge=<-' http://sprunge.us > {sprungefile}")
+        system(
+            f"cat {userdatafile} | curl -F 'sprunge=<-' http://sprunge.us > {sprungefile}"
+        )
         sprungedatafile = open(sprungefile, "r")
         readsprungedatafile = sprungedatafile.read()
         sprungedatafile.close()
-        await event.edit(f"Content Link: {readsprungedatafile}\nUpload By: <a href='tg://user?id={ridogramuserid}'>{ridogramusername}</a>")
+        await event.edit(
+            f"Content Link: {readsprungedatafile}\nUpload By: <a href='tg://user?id={ridogramuserid}'>{ridogramusername}</a>"
+        )
         remove(userdatafile)
         remove(sprungefile)
     except:

@@ -1,7 +1,8 @@
 from telethon import events
 from os import remove
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.rcd'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.rcd"))
 async def rundrc(event):
     await event.delete()
     try:
@@ -12,7 +13,8 @@ async def rundrc(event):
     except:
         pass
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.rts'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.rts"))
 async def runrts(event):
     await event.delete()
     try:

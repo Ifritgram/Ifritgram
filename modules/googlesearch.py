@@ -2,7 +2,8 @@ from telethon import events
 from time import sleep
 from googlesearch import search
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.gs'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.gs"))
 async def rungs(event):
     await event.edit("Searching...")
     sleep(2)

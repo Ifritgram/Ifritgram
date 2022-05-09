@@ -1,6 +1,7 @@
 from telethon import events
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.acsc'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.acsc"))
 async def runacsc(event):
     startbot = "/start"
     messagelocation = event.to_id

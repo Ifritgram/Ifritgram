@@ -5,7 +5,8 @@ from os import remove
 
 client = modules.client.client
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.tts'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.tts"))
 async def runtts(event):
     await event.delete()
     language = event.message.raw_text.split()
@@ -13,7 +14,9 @@ async def runtts(event):
     messagelocation = event.to_id
     filename = "ttsbyridogram.mp3"
     try:
-        createtts = gTTS(text=f"{getmessage.message}", lang=f"{language[1]}", slow=False)
+        createtts = gTTS(
+            text=f"{getmessage.message}", lang=f"{language[1]}", slow=False
+        )
         createtts.save(filename)
         await client.send_file(messagelocation, filename)
         remove(filename)

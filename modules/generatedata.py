@@ -2,7 +2,8 @@ from telethon import events
 from time import sleep
 import requests
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.fd'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.fd"))
 async def runfd(event):
     await event.edit("Processing...")
     sleep(2)
@@ -21,6 +22,11 @@ async def runfd(event):
         fakelocationp = maindata["results"][0]["location"]["postcode"]
         fakecountry = maindata["results"][0]["location"]["country"]
         fakeemail = maindata["results"][0]["email"]
-        await event.client.send_message(messagelocation, f"Title: {namet}\nFirstname: {namef}\nLastname: {namel}\nGender: {fakegender}\nCity: {fakelocationc}\nState: {fakelocations}\nPostcode: {fakelocationp}\nCountry: {fakecountry}\nEmail: {fakeemail}")
+        await event.client.send_message(
+            messagelocation,
+            f"Title: {namet}\nFirstname: {namef}\nLastname: {namel}\nGender: {fakegender}\nCity: {fakelocationc}\nState: {fakelocations}\nPostcode: {fakelocationp}\nCountry: {fakecountry}\nEmail: {fakeemail}",
+        )
     except:
-        await event.client.send_message(messagelocation, "Something Went Wrong")
+        await event.client.send_message(
+            messagelocation, "Something Went Wrong"
+        )

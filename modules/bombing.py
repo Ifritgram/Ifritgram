@@ -3,7 +3,8 @@ import modules.client
 
 client = modules.client.client
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.bomb'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.bomb"))
 async def runbomb(event):
     await event.delete()
     default = 0

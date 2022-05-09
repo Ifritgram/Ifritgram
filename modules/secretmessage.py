@@ -2,7 +2,8 @@ from telethon import events
 import base64
 from time import sleep
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.b64'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.b64"))
 async def runb64(event):
     await event.edit("Processing...")
     options = event.message.raw_text.split()
@@ -29,4 +30,4 @@ async def runb64(event):
     except IndexError:
         await event.edit("Select An Option")
     except:
-        await event.edit("Something Went Wrong") 
+        await event.edit("Something Went Wrong")

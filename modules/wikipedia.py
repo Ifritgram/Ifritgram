@@ -4,7 +4,8 @@ import modules.client
 
 client = modules.client.client
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.wiki'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.wiki"))
 async def runwiki(event):
     await event.delete()
     userquestion = event.message.raw_text.splitlines()

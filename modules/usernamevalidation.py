@@ -2,7 +2,8 @@ from telethon import events
 from time import sleep
 from usernames import is_safe_username
 
-@events.register(events.NewMessage(outgoing=True, pattern=r'\.uv'))
+
+@events.register(events.NewMessage(outgoing=True, pattern=r"\.uv"))
 async def runuv(event):
     await event.edit("Checking...")
     sleep(2)
@@ -12,10 +13,18 @@ async def runuv(event):
     try:
         scanreport = is_safe_username(f"{getusername.message}")
         if scanreport == True:
-            await event.client.send_message(messagelocation, f"Good News, {getusername.message} Was Not Found On Ridogram Blacklist.")
+            await event.client.send_message(
+                messagelocation,
+                f"Good News, {getusername.message} Was Not Found On Ridogram Blacklist.",
+            )
         elif scanreport == False:
-            await event.client.send_message(messagelocation, f"{getusername.message} Was Found On Ridogram Blacklist.")
+            await event.client.send_message(
+                messagelocation,
+                f"{getusername.message} Was Found On Ridogram Blacklist.",
+            )
         else:
-            await event.client.send_message(messagelocation, "Something Went Wrong")
+            await event.client.send_message(
+                messagelocation, "Something Went Wrong"
+            )
     except:
         pass
