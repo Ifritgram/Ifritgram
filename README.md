@@ -9,7 +9,7 @@
 
 <h2>String Session</h2>
 <p title="String Session">Collect String Session by running python3 stringsession.py locally or generate from Replit.</p>
-<a href="https://replit.com/@theridwanul/stringsession" target="_blank"><img src="images/runrepl.svg"/></a>
+<a href="https://replit.com/@iniridwanul/stringsession" target="_blank"><img src="images/runrepl.svg"/></a>
 
 <h2>Deployment</h2>
 <p title="Deployment">You can use Ridogram for free with the cloud application platform Heroku.</p>

@@ -5,7 +5,7 @@ from os import system
 async def runupdate(event):
     await event.edit("Temporarily Updating...")
     system("rm -rf *")
-    system("git clone https://github.com/theridwanul/Ridogram.git")
+    system("git clone https://github.com/iniridwanul/Ridogram.git")
     system("cd Ridogram && cp -r * /app/ && rm -rf Ridogram")
     await event.edit("Successfully Processed, Wait A Minute And Then Type .afoot")
     system("python3 ridogram.py")
