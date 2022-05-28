@@ -27,6 +27,10 @@
 
 [![Video Tutorial](images/howtodeployridogram.svg)](https://youtu.be/EO_XmAAjCng)
 
+<h2>Warning</h2>
+Dear Ridogram User,</br>
+If you use Ridogram to spam on Telegram or do not comply with Telegram's prohibition, Telegram will ban your account and then you will not blame Ridogram.
+
 <h2>Support</h2>
 <p title="Support">You can join us on any issue related to Ridogram Update and Support in Telegram.</p>
 <a href="https://t.me/ridogram" target="_blank"><img src="images/telegramchannelsupport.svg"/></a>
