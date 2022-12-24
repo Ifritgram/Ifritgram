@@ -12,7 +12,7 @@
 <a href="https://replit.com/@iniridwanul/stringsession" target="_blank"><img src="images/runrepl.svg"/></a>
 
 <h2>Deployment</h2>
-<p title="Deployment">You can use Ridogram for free with the cloud application platform Heroku.</p>
+<p title="Deployment">You can use Ridogram through the cloud application platform Heroku.</p>
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
