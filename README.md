@@ -1,5 +1,5 @@
 <h2>Ridogram</h2>
-<p title="Ridogram">Ridogram is an advanced multi-featured Telegram UserBot.</p>
+<p title="Crowgram">Crowgram is an advanced multi-featured Telegram UserBot.</p>
 
 ![](images/madeinbangladesh.svg)
 ![](images/opensource.svg)
