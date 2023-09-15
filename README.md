@@ -1,4 +1,4 @@
-<h2>Ridogram</h2>
+<h2>Crowgram</h2>
 <p title="Crowgram">Crowgram is an advanced multi-featured Telegram UserBot.</p>
 
 ![](images/madeinbangladesh.svg)
