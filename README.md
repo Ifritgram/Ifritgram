@@ -1,10 +1,10 @@
-<center
+<centre>
   
 ![](images/crowgram.png)
   
 <h2>Crowgram</h2>
 <p title="Crowgram">Crowgram is an advanced multi-featured Telegram UserBot.</p>
-</center>
+</centre>
 
 ![](images/madeinbangladesh.svg)
 ![](images/opensource.svg)
