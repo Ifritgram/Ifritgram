@@ -1,9 +1,5 @@
-<center>
-  
-![](assets/crowgram.png)
 <h2>Crowgram</h2>
 <p title="Crowgram">Crowgram is a powerful, advanced, multi-featured Telegram userbot.</p>
-</center>
 
 ![](assets/maintained.svg)
 ![](assets/license.svg)
