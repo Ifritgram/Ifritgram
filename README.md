@@ -11,7 +11,7 @@
 <h2>Deployment</h2>
 <p title="Deployment">You can use Crowgram through the cloud application platform Heroku.</p>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/iniridwanul/Crowgram)
 
 <h2>Support</h2>
 <p title="Support">You can join us on any issue related to Crowgram Update and Support in Telegram.</p>
