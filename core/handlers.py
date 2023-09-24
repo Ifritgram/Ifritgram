@@ -1,9 +1,9 @@
 import core.client
 import os
+import plugins
 from telethon import sync
 from telethon import version
 from platform import python_version
-import plugins.alive, plugins.ping, plugins.id, plugins.protection, plugins.restricted, plugins.logger, plugins.translator, plugins.who, plugins.help, plugins.updater
 
 crowgram = core.client.crowgram
 crowgram_bot = core.client.crowgram_bot
@@ -11,19 +11,19 @@ log_group = int(os.environ["log_group"])
 
 def run_handlers():
     with crowgram as crowgram_ai:
-        crowgram_ai.add_event_handler(plugins.alive.check_alive)
-        crowgram_ai.add_event_handler(plugins.ping.pinged)
-        crowgram_ai.add_event_handler(plugins.id.get_id)
-        crowgram_ai.add_event_handler(plugins.protection.add_contact)
-        crowgram_ai.add_event_handler(plugins.protection.delete_contact)
-        crowgram_ai.add_event_handler(plugins.protection.checking)
-        crowgram_ai.add_event_handler(plugins.restricted.get_restricted_content)
-        crowgram_ai.add_event_handler(plugins.logger.get_pm_log)
-        crowgram_ai.add_event_handler(plugins.logger.get_mention_log)
-        crowgram_ai.add_event_handler(plugins.translator.run_translator)
-        crowgram_ai.add_event_handler(plugins.who.check_user_history)
-        crowgram_ai.add_event_handler(plugins.help.crowgram_help)
-        crowgram_ai.add_event_handler(plugins.updater.run_updater)
+        crowgram_ai.add_event_handler(plugins.check_alive)
+        crowgram_ai.add_event_handler(plugins.pinged)
+        crowgram_ai.add_event_handler(plugins.get_id)
+        crowgram_ai.add_event_handler(plugins.add_contact)
+        crowgram_ai.add_event_handler(plugins.delete_contact)
+        crowgram_ai.add_event_handler(plugins.checking)
+        crowgram_ai.add_event_handler(plugins.get_restricted_content)
+        crowgram_ai.add_event_handler(plugins.get_pm_log)
+        crowgram_ai.add_event_handler(plugins.get_mention_log)
+        crowgram_ai.add_event_handler(plugins.run_translator)
+        crowgram_ai.add_event_handler(plugins.check_user_history)
+        crowgram_ai.add_event_handler(plugins.crowgram_help)
+        crowgram_ai.add_event_handler(plugins.run_updater)
 
     crowgram.start()
     crowgram_bot.start()
