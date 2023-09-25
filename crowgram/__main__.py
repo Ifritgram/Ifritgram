@@ -1,2 +1,2 @@
-import core
+from . import core
 core.run_handlers()
