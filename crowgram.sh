@@ -36,7 +36,7 @@ read_env() {
     fi
 }
 
-# activates evey lines of .env file
+# activates every lines of .env file
 read_lines() {
     while read line; do
         if [[ $line == *"="* && $line != \#* ]]; then
