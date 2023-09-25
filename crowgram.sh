@@ -48,11 +48,11 @@ read_lines() {
 
 # Run all functions
 run() {
-    python3 crowgram.py
+    python3 crowgram
 }
 
 check_venv
 install_requirements
 read_env
-read_lines 
+read_lines
 run

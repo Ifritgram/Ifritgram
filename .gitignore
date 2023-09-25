@@ -1,4 +1,4 @@
-crowgram.session
-.env
 __pycache__
 venv
+.env
+crowgram.session

@@ -1,1 +1,1 @@
-worker: python3 crowgram.py
+worker: python3 crowgram
