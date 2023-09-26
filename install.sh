@@ -14,7 +14,6 @@ check_dir() {
         echo -e "${RED}crowgram.sh file not found.${NC}"
         echo -e "${GREEN}Git clonning...${NC}"
         git clone $URL
-        echo -e "${GREEN}Entering into directory...${NC}"
         if [ -d "Crowgram" ]; then
             echo -e "${GREEN}Entering into directory...${NC}"
             cd Crowgram
