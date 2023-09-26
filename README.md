@@ -9,6 +9,11 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/iniridwanul/Crowgram)
 
+Or, simply run the following line in your Linux shell,
+```sh
+curl -s https://raw.githubusercontent.com/iniridwanul/Crowgram/master/install.sh | bash
+```
+
 <h2>Support</h2>
 <p title="Support">You can join us on any issue related to Crowgram Update and Support in Telegram.</p>
 <a href="https://t.me/crowgram" target="_blank"><img src="assets/telegramchannelsupport.svg"/></a>
