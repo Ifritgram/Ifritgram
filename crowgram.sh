@@ -43,7 +43,7 @@ read_lines() {
             export $line
             # echo $line
         fi
-    done < .env
+    done <.env
 }
 
 # Run all functions

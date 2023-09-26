@@ -26,7 +26,7 @@ check_dir() {
 }
 
 # Automatically create a .env file for above variables
-env_make (){
+env_make() {
     echo -e "${RED}Creating .env file...${NC}"
     echo -e "${GREEN}Enter your api_id:${NC}"
     read api_id
@@ -48,15 +48,15 @@ env_make (){
     read mention_log_location
 
     echo -e "${GREEN}Writing to .env file...${NC}"
-    echo "api_id=$api_id" >> .env
-    echo "api_hash=$api_hash" >> .env
-    echo "string=$string" >> .env
-    echo "bot_token=$bot_token" >> .env
-    echo "assistant_bot=$assistant_bot" >> .env
-    echo "owner=$owner" >> .env
-    echo "log_group=$log_group" >> .env
-    echo "pm_log_location=$pm_log_location" >> .env
-    echo "mention_log_location=$mention_log_location" >> .env
+    echo "api_id=$api_id" >>.env
+    echo "api_hash=$api_hash" >>.env
+    echo "string=$string" >>.env
+    echo "bot_token=$bot_token" >>.env
+    echo "assistant_bot=$assistant_bot" >>.env
+    echo "owner=$owner" >>.env
+    echo "log_group=$log_group" >>.env
+    echo "pm_log_location=$pm_log_location" >>.env
+    echo "mention_log_location=$mention_log_location" >>.env
     echo -e "${GREEN}.env file created.${NC}"
 }
 
