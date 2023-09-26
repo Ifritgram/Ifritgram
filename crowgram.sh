@@ -28,7 +28,7 @@ install_requirements() {
 # Check .env file
 read_env() {
     if [ ! -f ".env" ]; then
-        echo -e "${RED}.env file not found. Creating...${NC}"
+        echo -e "${RED}.env file not found.${NC}"
         echo -e "${GREEN}Please consider creating one...${NC}"
         echo -e "${GREEN}For refernece you can use '.env.sample'${NC}"
     else
