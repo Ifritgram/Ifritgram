@@ -88,6 +88,7 @@ async def checking(event):
             who_is = event.peer_id.user_id
             who_is_type = await event.get_chat()
             bot = who_is_type.bot
+            telegram = 777000
             find_user = await crowgram(GetFullUserRequest("me"))
             crowgram_user = find_user.users[0].id
             sender = await event.get_sender()
@@ -102,6 +103,8 @@ async def checking(event):
                 elif sender_id == crowgram_user:
                     pass
                 elif bot:
+                    pass
+                elif who_is == telegram:
                     pass
                 else:
                     crowgram_image = "https://telegra.ph/file/700b7f318d380cb2d228d.jpg"

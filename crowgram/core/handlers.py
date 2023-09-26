@@ -29,5 +29,5 @@ def run_handlers():
     crowgram_bot.start()
     print("Crowgram Started")
     crowgram_image = "https://telegra.ph/file/700b7f318d380cb2d228d.jpg"
-    crowgram.send_file(log_group, crowgram_image, caption=f"Your Crowgram has been started successfully.\n\n╭─⊸ Crowgram Version: 1.23.5\n├─⊸ Python Version: {python_version()}\n╰─⊸ Telethon Version: {version.__version__}\n\nThank You,\nCrowgram")
+    crowgram.send_file(log_group, crowgram_image, caption=f"Your Crowgram has been started successfully.\n\n╭─⊸ Crowgram Version: 1.23.6\n├─⊸ Python Version: {python_version()}\n╰─⊸ Telethon Version: {version.__version__}\n\nThank You,\nCrowgram")
     crowgram.run_until_disconnected()

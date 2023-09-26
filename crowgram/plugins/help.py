@@ -26,7 +26,7 @@ async def get_query(query):
             main_menu = core.helpers.display_menu
             show_help = query.builder.article(
                 title = "🤖 Crowgram",
-                text = "🤖 Crowgram\n⚙️ Version: 1.23.5\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.",
+                text = "🤖 Crowgram\n⚙️ Version: 1.23.6\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.",
                 buttons = main_menu
             )
             await query.answer([show_help])
@@ -60,7 +60,7 @@ async def help_response(event):
             elif button_data == b'updater':
                 await event.edit(utils.information.updater_usage, buttons=back_button)
             elif button_data == b'back':
-                await event.edit("🤖 Crowgram\n⚙️ Version: 1.23.5\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=main_menu)
+                await event.edit("🤖 Crowgram\n⚙️ Version: 1.23.6\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=main_menu)
         else:
             await event.answer("You don't have permission to access it; you need to deploy your own Crowgram.", alert=True)
     except:

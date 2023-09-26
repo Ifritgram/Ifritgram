@@ -8,4 +8,4 @@ async def run_updater(event):
     system("git clone https://github.com/iniridwanul/Crowgram.git")
     system("cd Crowgram && cp -r * /app/ && rm -rf Crowgram")
     await event.edit("Successfully processed, wait a minute, and then type >alive")
-    system("python3 crowgram.py")
+    system("python3 crowgram")
