@@ -15,7 +15,7 @@ check_dir() {
         echo -e "${GREEN}Git clonning...${NC}"
         git clone $URL
         echo -e "${GREEN}Entering into directory...${NC}"
-        if [ -d "Crowgram" ]: then
+        if [ -d "Crowgram" ]; then
             echo -e "${GREEN}Entering into directory...${NC}"
             cd Crowgram
         fi
