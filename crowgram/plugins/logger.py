@@ -15,11 +15,14 @@ async def get_pm_log(event):
                 crowgram_user_id = get_crowgram_user_details.users[0].id
                 get_sender = await event.get_sender()
                 sender_id = get_sender.id
+                telegram = 777000
                 get_sender_type = await event.get_chat()
                 sender_type_id = get_sender_type.id
                 type_information = await crowgram(GetFullUserRequest(sender_type_id))
                 bot = type_information.users[0].bot
                 if crowgram_user_id == sender_id:
+                    pass
+                elif sender_id == telegram:
                     pass
                 elif bot:
                     pass
