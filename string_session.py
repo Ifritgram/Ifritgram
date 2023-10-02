@@ -1,5 +1,13 @@
-from telethon.sync import TelegramClient
-from telethon.sessions import StringSession
+#!/venv/bin/python3
+import os # for installing telethon
+
+try:
+    from telethon.sync import TelegramClient
+    from telethon.sessions import StringSession
+except:
+    print("Setting up virtual environment...")
+    if not os.path.isdir("venv"):
+        os.system("python3 -m venv venv");
 
 api_id = int(input("Enter API ID: "))
 api_hash = input("Enter API Hash: ")
