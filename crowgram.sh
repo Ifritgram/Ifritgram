@@ -54,6 +54,7 @@ read_lines() {
             # echo $line
         fi
     done <.env
+    echo -e "${GREEN}Variables exported.${NC}"
 }
 
 # string generation
