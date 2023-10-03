@@ -1,4 +1,5 @@
 #!/bin/bash
+# Will be deleted
 
 # Colors for output
 RED='\033[0;31m'
