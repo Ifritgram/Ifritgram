@@ -11,7 +11,7 @@
 
 Or, simply run the following line in your Linux shell,
 ```sh
-curl -s https://raw.githubusercontent.com/SharafatKarim/crowgram/bash-scripts-merge/crowgram.sh > install.sh && bash install.sh && rm install.sh
+curl -s https://raw.githubusercontent.com/iniridwanul/Crowgram/master/crowgram.sh > install.sh && bash install.sh && rm install.sh
 ```
 
 <h2>Support</h2>
