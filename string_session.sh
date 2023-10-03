@@ -1,6 +1,6 @@
 #!/bin/bash
 
-check_venv(){
+check_venv() {
     if [ ! -d "venv" ]; then
         python3 -m venv venv
         check_venv
@@ -10,7 +10,7 @@ check_venv(){
     fi
 }
 
-run_string_session_generator(){
+run_string_session_generator() {
     clear
     python3 string_session.py
 }
