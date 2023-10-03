@@ -85,8 +85,8 @@ env_make() {
     read api_id
     echo -e "${GREEN}Enter your api_hash:${NC}"
     read api_hash
-    echo -e "${GREEN}Enter your string:${NC}"
     string_confirmation
+    echo -e "${GREEN}Enter your string:${NC}"
     read string
     echo -e "${GREEN}Enter your bot_token:${NC}"
     read bot_token
