@@ -9,7 +9,9 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/iniridwanul/Crowgram)
 
-Or, simply run the following line in your Linux shell,
+<h2>Self Host</h2>
+<p title="Self Host">It is possible to host Crowgram on the local computer through the command mentioned below.</p>
+
 ```sh
 curl -s https://raw.githubusercontent.com/iniridwanul/Crowgram/master/crowgram.sh > install.sh && bash install.sh && rm install.sh
 ```
