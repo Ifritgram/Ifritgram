@@ -1,5 +1,6 @@
 import core.client
 import core.helpers
+import utils
 import utils.information
 import os
 from telethon import events
@@ -26,7 +27,7 @@ async def get_query(query):
             main_menu = core.helpers.display_menu
             show_help = query.builder.article(
                 title = "🤖 Crowgram",
-                text = "🤖 Crowgram\n⚙️ Version: 1.23.7\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.",
+                text = f"🤖 Crowgram\n⚙️ Version: {utils.crowgram_version}\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.",
                 buttons = main_menu
             )
             await query.answer([show_help])
@@ -53,14 +54,14 @@ async def help_response(event):
                 await event.edit(utils.information.restricted_usage, buttons=back_button) 
             elif button_data == b'logger':
                 await event.edit(utils.information.logger_usage, buttons=back_button)        
-            elif button_data == b'translator':
-                await event.edit(utils.information.translator_usage, buttons=back_button)
+            elif button_data == b'player':
+                await event.edit(utils.information.player_usage, buttons=back_button)
             elif button_data == b'who':
                 await event.edit(utils.information.who_usage, buttons=back_button)           
             elif button_data == b'updater':
                 await event.edit(utils.information.updater_usage, buttons=back_button)
             elif button_data == b'back':
-                await event.edit("🤖 Crowgram\n⚙️ Version: 1.23.7\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=main_menu)
+                await event.edit(f"🤖 Crowgram\n⚙️ Version: {utils.crowgram_version}\n\n📖 Crowgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=main_menu)
         else:
             await event.answer("You don't have permission to access it; you need to deploy your own Crowgram.", alert=True)
     except:

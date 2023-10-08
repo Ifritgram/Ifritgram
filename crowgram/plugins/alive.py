@@ -1,4 +1,5 @@
 import core.client
+import utils
 from telethon import events
 from telethon import version
 from platform import python_version
@@ -13,6 +14,6 @@ async def check_alive(event):
         first_name = crowgram_user_details.first_name
         crowgram_image = "https://telegra.ph/file/700b7f318d380cb2d228d.jpg"
         message_location = event.to_id
-        await crowgram.send_file(message_location, crowgram_image, caption=f"Dear {first_name},\nI'm glad to announce that Crowgram is able to assist you.\n\n╭─⊸ Crowgram Version: 1.23.7\n├─⊸ Python Version: {python_version()}\n╰─⊸ Telethon Version: {version.__version__}\n\nThank You,\nCrowgram")
+        await crowgram.send_file(message_location, crowgram_image, caption=f"Dear {first_name},\nI'm glad to announce that Crowgram is able to assist you.\n\n╭─⊸ Crowgram Version: {utils.crowgram_version}\n├─⊸ Python Version: {python_version()}\n╰─⊸ Telethon Version: {version.__version__}\n\nThank You,\nCrowgram")
     except:
         pass

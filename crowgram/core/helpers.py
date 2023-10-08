@@ -12,7 +12,7 @@ display_menu = [
         Button.inline("Logger", b'logger')
     ],
     [
-        Button.inline("Translator", b'translator'),
+        Button.inline("Player", b'player'),
         Button.inline("Who", b'who'),
         Button.inline("Updater", b'updater')
     ],

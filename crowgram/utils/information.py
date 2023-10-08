@@ -10,7 +10,7 @@ restricted_usage = "🔌 Plugin Name: Restricted\n\n📖 Description: It is poss
 
 logger_usage = "🔌 Plugin Name: Logger\n\n📖 Description: It is possible to keep logs of private messages and group messages.\n\n🪄 Usage: Crowgram will automatically log private messages and group messages; it requires mandatory log groups, or the logger will not work."
 
-translator_usage = "🔌 Plugin Name: Translator\n\n📖 Description: Any language message can be translated into any language.\n\n🪄 Usage: To translate any message in the language of your choice, the following command should be given in the reply to that message.\n\nCommand: >tr bn"
+player_usage = "🔌 Plugin Name: Player\n\n📖 Description: It is possible to listen to music on Telegram voice calls through the player; the player will find music from YouTube and play music.\n\n🪄 Usage: The name of the song or YouTube video link that you want to listen to should be added to the >play command.\nExample: >play song name or >play YouTube url\n\nIf the song needs to be paused, it can be paused only through the >pause command.\n\nIf the song needs to be resumed, it can be resumed only through the >resume command.\n\nJust use the >end command to stop the song; streaming will be stopped by the >end command."
 
 who_usage = "🔌 Plugin Name: Who\n\n📖 Description: It is possible to know the previous name and previous username of any user.\n\n🪄 Usage: The following command should be used to reply to the message of the user who needs to know the information.\n\nCommand: >who"
 

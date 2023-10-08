@@ -1,2 +1,4 @@
 Telethon==1.30.3
-googletrans==3.1.0a0
+py-tgcalls==0.9.7
+youtube-search-python==1.6.6
+yt-dlp==2023.9.24

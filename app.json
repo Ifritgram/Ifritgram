@@ -1,11 +1,12 @@
 {
     "name": "Crowgram",
     "description": "Crowgram is a powerful, advanced, multi-featured Telegram userbot.",
-    "logo": "https://telegra.ph/file/700b7f318d380cb2d228d.jpg",
+    "logo": "https://telegra.ph/file/d857eb6d9b29000a8fe1c.png",
     "keywords": [
       "userbot",
       "plugins",
       "modules",
+      "music",
       "productivity"
     ],
     "repository": "https://github.com/iniridwanul/Crowgram",
@@ -40,6 +41,21 @@
         "value": "",
         "required": true
       },
+      "assistant_api_id": {
+        "description": "Collect this value from my.telegram.org and do not share it with anyone.",
+        "value": "",
+        "required": true
+      },
+      "assistant_api_hash": {
+        "description": "Collect this value from my.telegram.org and do not share it with anyone.",
+        "value": "",
+        "required": true
+      },
+      "assistant_string": {
+        "description": "Collect this value by running python3 string_session.py, and never accidentally share it with anyone.",
+        "value": "",
+        "required": true
+      },
       "log_group": {
         "description": "Enter Crowgram's log group ID.",
         "value": "",
@@ -58,5 +74,9 @@
     },
     "buildpacks": [{
         "url": "heroku/python"
-      }]
+      },
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
   }
