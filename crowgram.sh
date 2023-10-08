@@ -142,6 +142,7 @@ string_confirmation() {
 
 # Automatically create a .env file for above variables
 env_make() {
+    clear
     echo -e "${RED}Creating .env file...${NC}"
 
     echo -e "${GREEN}Enter your api_id:${NC}"
@@ -151,10 +152,20 @@ env_make() {
     string_confirmation
     echo -e "${GREEN}Enter your string:${NC}"
     read string
+
     echo -e "${GREEN}Enter your bot_token:${NC}"
     read bot_token
     echo -e "${GREEN}Enter your assistant_bot:${NC}"
     read assistant_bot
+
+    echo -e "${GREEN}Enter your assistant_api_id:${NC}"
+    read assistant_api_id
+    echo -e "${GREEN}Enter your assistant_api_hash:${NC}"
+    read assistant_api_hash
+    string_confirmation
+    echo -e "${GREEN}Enter your assistant_string:${NC}"
+    read assistant_string
+
     echo -e "${GREEN}Enter your owner:${NC}"
     read owner
     echo -e "${GREEN}Enter your log_group:${NC}"
@@ -170,6 +181,9 @@ env_make() {
     echo "string=$string" >>.env
     echo "bot_token=$bot_token" >>.env
     echo "assistant_bot=$assistant_bot" >>.env
+    echo "assistant_api_id=$assistant_api_id" >>.env
+    echo "assistant_api_hash=$assistant_api_hash" >>.env
+    echo "assistant_string=$assistant_string" >>.env
     echo "owner=$owner" >>.env
     echo "log_group=$log_group" >>.env
     echo "pm_log_location=$pm_log_location" >>.env
@@ -199,6 +213,7 @@ check_env() {
 
 # Run all functions
 run() {
+    clear
     python3 crowgram
 }
 
