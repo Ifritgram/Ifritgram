@@ -23,6 +23,13 @@ ubuntu() {
     echo -e "${GREEN}Dependencies installed.${NC}"
 }
 
+fedora() {
+    echo -e "${RED}Installing dependencies...${NC}"
+    sudo dnf update
+    sudo dnf install -y git python3 python3-pip python3-setuptools python3-wheel python3-virtualenv ffmpeg nodejs npm
+    echo -e "${GREEN}Dependencies installed.${NC}"
+}
+
 termux() {
     echo -e "${RED}Installing dependencies...${NC}"
     pkg update
@@ -45,7 +52,8 @@ check_os() {
     echo -e "${GREEN}Enter 1 for Ubuntu/Debian${NC}"
     echo -e "${GREEN}Enter 2 for Arch/Manjaro${NC}"
     echo -e "${GREEN}Enter 3 for Termux${NC}"
-    echo -e "${GREEN}Enter 4 for Other${NC}"
+    echo -e "${GREEN}Enter 4 for fedora${NC}"
+    echo -e "${GREEN}Enter 5 for other${NC}"
     read os
 
     if [ $os == "1" ]; then
@@ -55,6 +63,8 @@ check_os() {
     elif [ $os == "3" ]; then
         termux
     elif [ $os == "4" ]; then
+        fedora
+    elif [ $os == "5" ]; then
         other_os
     else
         echo -e "${RED}Invalid option.${NC}"
