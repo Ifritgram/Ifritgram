@@ -67,6 +67,7 @@ async def play_audio(event):
                     remove("song.mp3")
                     await crowgram_assistant.send_message(message_location, f"Dear <a href='tg://user?id={requestor_id}'>{first_name}</a>,\n❗️Already streaming is in progress; please wait until it finishes.")
                 except:
+                    remove("song.mp3")
                     pass
     else:
         await crowgram_assistant.send_message(message_location, f"Dear <a href='tg://user?id={requestor_id}'>{first_name}</a>,\n❗️You don't have permission to use me; please deploy your own Crowgram.")

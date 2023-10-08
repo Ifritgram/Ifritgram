@@ -16,7 +16,6 @@ async def resume_audio(event):
         pass
     chat_id = event.to_id.channel_id
     requestor_id = event.from_id.user_id
-    requestor_id = event.from_id.user_id
     get_user_details = await crowgram_assistant(GetFullUserRequest(requestor_id))
     first_name = get_user_details.users[0].first_name
     crowgram_assistant.parse_mode = "html"
