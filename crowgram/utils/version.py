@@ -1,1 +1,1 @@
-crowgram_version = "2.23.7"
+crowgram_version = "2.23.8"
