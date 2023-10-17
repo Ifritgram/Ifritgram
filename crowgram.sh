@@ -218,6 +218,7 @@ run() {
 }
 
 check_dir
+check_os
 check_venv
 install_requirements
 check_env
