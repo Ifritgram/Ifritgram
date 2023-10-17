@@ -32,9 +32,11 @@ fedora() {
 
 termux() {
     echo -e "${RED}Installing dependencies...${NC}"
-    pkg update
-    pkg upgrade -y
-    pkg install -y git python python-pip python-setuptools python-wheel python-virtualenv ffmpeg nodejs npm
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt install python -y
+    pip3 install virtualenv
+    apt install git nodejs ffmpeg -y
     echo -e "${GREEN}Dependencies installed.${NC}"
 }
 
