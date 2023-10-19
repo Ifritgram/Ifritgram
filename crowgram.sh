@@ -8,7 +8,6 @@ NC='\033[0m'
 # Variables [FOR DEVS]
 URL="https://github.com/iniridwanul/Crowgram"
 
-// Ascii art for Crowgram
 welcome() {
     echo -e "${RED}Welcome to Crowgram!${NC}"
     echo -e "       __________  ____ _       ____________  ___    __  ___ "
