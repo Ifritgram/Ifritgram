@@ -8,6 +8,16 @@ NC='\033[0m'
 # Variables [FOR DEVS]
 URL="https://github.com/iniridwanul/Crowgram"
 
+welcome() {
+    echo -e "${RED}Welcome to Crowgram!${NC}"
+    echo -e "       __________  ____ _       ____________  ___    __  ___ "
+    echo -e "  / ____/ __ \/ __ \ |     / / ____/ __ \/   |  /  |/  /     "
+    echo -e " / /   / /_/ / / / / | /| / / / __/ /_/ / /| | / /|_/ /      "
+    echo -e "/ /___/ _, _/ /_/ /| |/ |/ / /_/ / _, _/ ___ |/ /  / /       "
+    echo -e "\____/_/ |_|\____/ |__/|__/\____/_/ |_/_/  |_/_/  /_/        "
+    echo -e "                                                             "
+}
+
 archlinux() {
     echo -e "${RED}Installing dependencies...${NC}"
     sudo pacman -Syyu --noconfirm
@@ -30,14 +40,6 @@ fedora() {
     echo -e "${GREEN}Dependencies installed.${NC}"
 }
 
-termux() {
-    echo -e "${RED}Installing dependencies...${NC}"
-    pkg update
-    pkg upgrade -y
-    pkg install -y git python python-pip python-setuptools python-wheel python-virtualenv ffmpeg nodejs npm
-    echo -e "${GREEN}Dependencies installed.${NC}"
-}
-
 other_os() {
     echo -e "${RED}Please install the dependencies manually.${NC}"
     echo -e "${GREEN}Dependencies:${NC}"
@@ -51,9 +53,8 @@ check_os() {
     echo -e "${RED}What is your OS?${NC}"
     echo -e "${GREEN}Enter 1 for Ubuntu/Debian${NC}"
     echo -e "${GREEN}Enter 2 for Arch/Manjaro${NC}"
-    echo -e "${GREEN}Enter 3 for Termux${NC}"
-    echo -e "${GREEN}Enter 4 for fedora${NC}"
-    echo -e "${GREEN}Enter 5 for other${NC}"
+    echo -e "${GREEN}Enter 3 for fedora${NC}"
+    echo -e "${GREEN}Enter 4 for other${NC}"
     read os
 
     if [ $os == "1" ]; then
@@ -61,10 +62,8 @@ check_os() {
     elif [ $os == "2" ]; then
         archlinux
     elif [ $os == "3" ]; then
-        termux
-    elif [ $os == "4" ]; then
         fedora
-    elif [ $os == "5" ]; then
+    elif [ $os == "4" ]; then
         other_os
     else
         echo -e "${RED}Invalid option.${NC}"
@@ -217,6 +216,8 @@ run() {
     python3 crowgram
 }
 
+welcome
+check_os
 check_dir
 check_venv
 install_requirements
