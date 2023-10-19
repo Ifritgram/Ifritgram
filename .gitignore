@@ -3,3 +3,4 @@ venv
 .env
 .vscode
 crowgram.session
+crowgram.session-journal
