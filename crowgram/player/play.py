@@ -16,10 +16,10 @@ owner = int(environ["owner"])
 async def play_audio(event):
     try:
         await event.delete()
+        message_location = event.to_id.channel_id
+        requestor_id = event.from_id.user_id
     except:
         pass
-    message_location = event.to_id.channel_id
-    requestor_id = event.from_id.user_id
     get_data = event.message.raw_text.splitlines()
     command = ">play"
     remove_command = get_data[0].replace(">play ", "")
