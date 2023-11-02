@@ -24,6 +24,7 @@ def run_handlers():
         crowgram_ai.add_event_handler(plugins.get_pm_log)
         crowgram_ai.add_event_handler(plugins.get_mention_log)
         crowgram_ai.add_event_handler(plugins.check_user_history)
+        crowgram_ai.add_event_handler(plugins.set_helper)
         crowgram_ai.add_event_handler(plugins.crowgram_help)
         crowgram_ai.add_event_handler(plugins.run_updater)
 
