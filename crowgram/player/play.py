@@ -3,6 +3,7 @@ from os import environ, remove
 from telethon import events
 from youtubesearchpython import VideosSearch
 from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.functions.contacts import GetContactsRequest
 import yt_dlp
 from pytgcalls.types import AudioPiped
 from pytgcalls.exceptions import NoActiveGroupCall, AlreadyJoinedError
@@ -28,7 +29,11 @@ async def play_audio(event):
     get_user_details = await crowgram_assistant(GetFullUserRequest(requestor_id))
     first_name = get_user_details.users[0].first_name
     crowgram_assistant.parse_mode = "html"
-    if owner == requestor_id:
+    contacts = await crowgram_assistant(GetContactsRequest(hash=0))
+    contacts_users_id = set([])
+    for user in contacts.users:
+        contacts_users_id.add(user.id)
+    if owner == requestor_id or requestor_id in contacts_users_id:
         if command in get_song_name:
             await crowgram_assistant.send_message(message_location, f"Dear <a href='tg://user?id={requestor_id}'>{first_name}</a>,\n❗️No song name was found; please enter a song name.")
         else:

@@ -2,6 +2,7 @@ import core.client
 from os import environ
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.functions.contacts import GetContactsRequest
 from pytgcalls.exceptions import GroupCallNotFound
 
 crowgram_assistant = core.client.crowgram_assistant
@@ -19,7 +20,11 @@ async def pause_audio(event):
     get_user_details = await crowgram_assistant(GetFullUserRequest(requestor_id))
     first_name = get_user_details.users[0].first_name
     crowgram_assistant.parse_mode = "html"
-    if owner == requestor_id:
+    contacts = await crowgram_assistant(GetContactsRequest(hash=0))
+    contacts_users_id = set([])
+    for user in contacts.users:
+        contacts_users_id.add(user.id)
+    if owner == requestor_id or requestor_id in contacts_users_id:
         try:
             await call.pause_stream(chat_id)
             await crowgram_assistant.send_message(chat_id, f"▶️ Paused\n👤Order by: <a href='tg://user?id={requestor_id}'>{first_name}</a>")

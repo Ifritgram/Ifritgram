@@ -30,6 +30,9 @@ def run_handlers():
 
 def run_assistant_handlers():
     with crowgram_assistant as assistant:
+        assistant.add_event_handler(player.connect_user)
+        assistant.add_event_handler(player.disconnect_user)
+        assistant.add_event_handler(player.approved_list)
         assistant.add_event_handler(player.play_audio)
         assistant.add_event_handler(player.pause_audio)
         assistant.add_event_handler(player.resume_audio)
