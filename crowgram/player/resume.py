@@ -1,3 +1,9 @@
+'''
+Plugin Name: Resume
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 import core.client
 from os import environ
 from telethon import events

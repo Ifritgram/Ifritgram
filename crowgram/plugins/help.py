@@ -1,3 +1,9 @@
+'''
+Plugin Name: Help
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 import core.client
 import core.helpers
 import utils

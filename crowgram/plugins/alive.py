@@ -1,3 +1,9 @@
+'''
+Plugin Name: Alive
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 import core.client
 import utils
 from telethon import events

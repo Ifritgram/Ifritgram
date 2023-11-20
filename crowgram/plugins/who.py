@@ -1,3 +1,9 @@
+'''
+Plugin Name: Who
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 import core.client
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest

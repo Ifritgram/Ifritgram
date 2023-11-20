@@ -1,3 +1,9 @@
+'''
+Plugin Name: Updater
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 from telethon import events
 from os import system
 

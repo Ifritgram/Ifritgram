@@ -1,3 +1,9 @@
+'''
+Plugin Name: Play
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 import core.client
 from os import environ, remove
 from telethon import events

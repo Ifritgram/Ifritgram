@@ -1,3 +1,9 @@
+'''
+Plugin Name: Ping
+Developer: iniridwanul
+License: AGPL-3.0 license
+'''
+
 import core.client
 from telethon import events
 from datetime import datetime
