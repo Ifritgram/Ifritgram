@@ -6,6 +6,7 @@ import utils
 from telethon import sync
 from telethon import version
 from platform import python_version
+from pytgcalls import __version__
 
 crowgram = core.client.crowgram
 crowgram_bot = core.client.crowgram_bot
@@ -43,7 +44,7 @@ def run_assistant_handlers():
     crowgram_assistant.start()
     print("Crowgram Started")
     crowgram_image = "https://telegra.ph/file/700b7f318d380cb2d228d.jpg"
-    crowgram.send_file(log_group, crowgram_image, caption=f"Your Crowgram has been started successfully.\n\n╭─⊸ Crowgram Version: {utils.crowgram_version}\n├─⊸ Python Version: {python_version()}\n╰─⊸ Telethon Version: {version.__version__}\n\nThank You,\nCrowgram")
+    crowgram.send_file(log_group, crowgram_image, caption=f"Your Crowgram has been started successfully.\n\n╭─⊸ Crowgram Version: {utils.crowgram_version}\n├─⊸ Python Version: {python_version()}\n├─⊸ Telethon Version: {version.__version__}\n╰─⊸ PyTgCalls Version: {__version__}\n\nThank You,\nCrowgram")
     try:
         crowgram.run_until_disconnected()
     finally:
