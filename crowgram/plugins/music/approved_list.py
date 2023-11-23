@@ -15,7 +15,7 @@ crowgram_assistant = core.client.crowgram_assistant
 owner = int(environ["owner"])
 
 @events.register(events.NewMessage(incoming=True, pattern=r"\>l"))
-async def approved_list(event):
+async def show_approved_list(event):
     try:
         if event.is_private:
             commander = event.original_update.user_id

@@ -1,7 +1,6 @@
 import core.client
 import os
-import plugins
-import player
+from plugins import misc, music
 import utils
 from telethon import sync
 from telethon import version
@@ -15,29 +14,29 @@ log_group = int(os.environ["log_group"])
 
 def run_handlers():
     with crowgram as crowgram_ai:
-        crowgram_ai.add_event_handler(plugins.check_alive)
-        crowgram_ai.add_event_handler(plugins.pinged)
-        crowgram_ai.add_event_handler(plugins.get_id)
-        crowgram_ai.add_event_handler(plugins.add_contact)
-        crowgram_ai.add_event_handler(plugins.delete_contact)
-        crowgram_ai.add_event_handler(plugins.checking)
-        crowgram_ai.add_event_handler(plugins.get_restricted_content)
-        crowgram_ai.add_event_handler(plugins.get_pm_log)
-        crowgram_ai.add_event_handler(plugins.get_mention_log)
-        crowgram_ai.add_event_handler(plugins.check_user_history)
-        crowgram_ai.add_event_handler(plugins.set_helper)
-        crowgram_ai.add_event_handler(plugins.crowgram_help)
-        crowgram_ai.add_event_handler(plugins.run_updater)
+        crowgram_ai.add_event_handler(misc.check_alive)
+        crowgram_ai.add_event_handler(misc.pinged)
+        crowgram_ai.add_event_handler(misc.get_id)
+        crowgram_ai.add_event_handler(misc.add_contact)
+        crowgram_ai.add_event_handler(misc.delete_contact)
+        crowgram_ai.add_event_handler(misc.checking)
+        crowgram_ai.add_event_handler(misc.get_restricted_content)
+        crowgram_ai.add_event_handler(misc.get_pm_log)
+        crowgram_ai.add_event_handler(misc.get_mention_log)
+        crowgram_ai.add_event_handler(misc.check_user_history)
+        crowgram_ai.add_event_handler(misc.set_helper)
+        crowgram_ai.add_event_handler(misc.crowgram_help)
+        crowgram_ai.add_event_handler(misc.run_updater)
 
 def run_assistant_handlers():
     with crowgram_assistant as assistant:
-        assistant.add_event_handler(player.connect_user)
-        assistant.add_event_handler(player.disconnect_user)
-        assistant.add_event_handler(player.approved_list)
-        assistant.add_event_handler(player.play_audio)
-        assistant.add_event_handler(player.pause_audio)
-        assistant.add_event_handler(player.resume_audio)
-        assistant.add_event_handler(player.end_audio)
+        assistant.add_event_handler(music.connect_user)
+        assistant.add_event_handler(music.disconnect_user)
+        assistant.add_event_handler(music.show_approved_list)
+        assistant.add_event_handler(music.play_audio)
+        assistant.add_event_handler(music.pause_audio)
+        assistant.add_event_handler(music.resume_audio)
+        assistant.add_event_handler(music.end_audio)
 
     crowgram.start()
     crowgram_bot.start()
