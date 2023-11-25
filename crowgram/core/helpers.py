@@ -1,6 +1,16 @@
 from telethon.tl.custom import Button
 
-display_menu = [
+categories_menu = [
+    [
+        Button.inline("🧩 Misc", b'misc'),
+        Button.inline("🎧 Music", b'music')
+    ],
+    [
+        Button.url("💬 Crowgram Chat", url="https://t.me/crowgramchat")
+    ]
+]
+
+misc_menu = [
     [
         Button.inline("Alive", b'alive'),
         Button.inline("Ping", b'ping'),
@@ -12,17 +22,41 @@ display_menu = [
         Button.inline("Logger", b'logger')
     ],
     [
-        Button.inline("Player", b'player'),
         Button.inline("Who", b'who'),
         Button.inline("Updater", b'updater')
     ],
     [
-        Button.url("Crowgram Chat", url="https://t.me/crowgramchat")
+        Button.inline("Main Menu", b'main_menu')
     ]
 ]
 
-back = [
+music_menu = [
     [
-        Button.inline("Back", b'back')
+        Button.inline("Connect", b'connect'),
+        Button.inline("Disconnect", b'disconnect'),
+        Button.inline("Authorized", b'authorized')
+    ],
+    [
+        Button.inline("Play", b'play'),
+        Button.inline("Pause", b'pause'),
+        Button.inline("Resume", b'resume')
+    ],
+    [
+        Button.inline("End", b'end'),
+    ],
+    [
+        Button.inline("Main Menu", b'main_menu')
+    ]
+]
+
+back_misc = [
+    [
+        Button.inline("Back", b'back_misc')
+    ]
+]
+
+back_music = [
+    [
+        Button.inline("Back", b'back_music')
     ]
 ]
