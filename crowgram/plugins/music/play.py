@@ -70,7 +70,7 @@ async def play_audio(event):
                 try:
                     await call.join_group_call(message_location, AudioPiped("song.mp3"))
                     remove("song.mp3")
-                    await crowgram_assistant.send_message(message_location, f"🔉 Streaming has started\n\n🎧 Name: {song_title}\n⌛️ Duration: {song_duration}\n👤 Requested By: <a href='tg://user?id={requestor_id}'>{first_name}</a>\n🔗 Source: <a href='{song_link}'>Click Here</a>", link_preview=False)
+                    await crowgram_assistant.send_message(message_location, f"🔉 Audio streaming has started\n\n🎧 Name: {song_title}\n⌛️ Duration: {song_duration}\n👤 Requested By: <a href='tg://user?id={requestor_id}'>{first_name}</a>\n🔗 Source: <a href='{song_link}'>Click Here</a>", link_preview=False)
                 except NoActiveGroupCall:
                     remove("song.mp3")
                     await crowgram_assistant.send_message(message_location, f"Dear <a href='tg://user?id={requestor_id}'>{first_name}</a>,\n❗️Group Call is not running; please start Group Call first.")
