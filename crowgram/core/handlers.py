@@ -34,6 +34,7 @@ def run_assistant_handlers():
         assistant.add_event_handler(music.disconnect_user)
         assistant.add_event_handler(music.show_approved_list)
         assistant.add_event_handler(music.play_audio)
+        assistant.add_event_handler(music.play_video)
         assistant.add_event_handler(music.pause_audio)
         assistant.add_event_handler(music.resume_audio)
         assistant.add_event_handler(music.end_audio)
