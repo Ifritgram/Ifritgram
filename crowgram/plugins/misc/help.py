@@ -85,6 +85,8 @@ async def help_response(event):
                 await event.edit(utils.information.authorized_usage, buttons=back_music_menu)
             elif button_data == b'play':
                 await event.edit(utils.information.play_usage, buttons=back_music_menu)
+            elif button_data == b'vplay':
+                await event.edit(utils.information.vplay_usage, buttons=back_music_menu)
             elif button_data == b'pause':
                 await event.edit(utils.information.pause_usage, buttons=back_music_menu)
             elif button_data == b'resume':

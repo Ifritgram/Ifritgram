@@ -22,6 +22,8 @@ authorized_usage = "🔌 Plugin Name: Approve List\n\n📖 Description: It is po
 
 play_usage = "🔌 Plugin Name: Play\n\n📖 Description: It is possible to listen to music from YouTube within a Telegram voice call, and it is possible to play music using the name of the favorite song or YouTube video link in a Telegram voice call.\n\n🪄 Usage: The name of the song or YouTube video link that you want to listen to should be added to the >play command.\nExample: >play song name or >play YouTube url"
 
+vplay_usage = "🔌 Plugin Name: vPlay\n\n📖 Description: It is possible to listen to music from YouTube within a Telegram video call, and it is possible to play music using the name of the favorite song or YouTube video link in a Telegram video call.\n\n🪄 Usage: The name of the song or YouTube video link that you want to listen to should be added to the >vplay command.\nExample: >vplay song name or >vplay YouTube url"
+
 pause_usage = "🔌 Plugin Name: Pause\n\n📖 Description: It is possible to control the music player using the voice call method of Telegram, and the music can be paused if desired.\n\n🪄 Usage: If the song needs to be paused, it can be paused only through the >pause command."
 
 resume_usage = "🔌 Plugin Name: Resume\n\n📖 Description: It is possible to control the music player using the voice call method of Telegram, and the music can be resumed if desired.\n\n🪄 Usage: If the song needs to be resumed, it can be resumed only through the >resume command."

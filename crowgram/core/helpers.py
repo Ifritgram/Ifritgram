@@ -38,11 +38,12 @@ music_menu = [
     ],
     [
         Button.inline("Play", b'play'),
-        Button.inline("Pause", b'pause'),
-        Button.inline("Resume", b'resume')
+        Button.inline("vPlay", b'vplay'),
+        Button.inline("Pause", b'pause')
     ],
     [
-        Button.inline("End", b'end'),
+        Button.inline("Resume", b'resume'),
+        Button.inline("End", b'end')
     ],
     [
         Button.inline("Main Menu", b'main_menu')
