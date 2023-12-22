@@ -2,7 +2,7 @@ alive_usage = "🔌 Plugin Name: Alive\n\n📖 Description: This is used to chec
 
 ping_usage = "🔌 Plugin Name: Ping\n\n📖 Description: Check how long it takes to ping Crowgram.\n\n🪄 Usage: Use the >ping command to find out how long it takes to ping Crowgram."
 
-id_usage = "🔌 Plugin Name: ID\n\n📖 Description: It is used to know the Chat ID of the user and group.\n\n🪄 Usage: It is possible to get the chat ID of a user or group through the >id command."
+id_usage = "🔌 Plugin Name: ID\n\n📖 Description: It is possible to get the chat ID of a user or group through the >id command.\n\n🪄 Usage: Through this feature, it is possible to get the chat ID of the user or group, and it is also possible to get the basic information of the user. You have to go to any chat and use the >id command, or if you give the command in the reply to any user's message, it will be possible to see the information, and the >id @username feature is also able to work."
 
 protection_usage = "🔌 Plugin Name: Protection\n\n📖 Description: If an unknown person sends a private message without permission, that user will be blocked directly.\n\n🪄 Usage: If you want to allow an unknown user to send a private message, then use the following command to reply to that user's message.\n\nCommand: >a\n\nIf you want to remove the permission to send a private message to someone who has permission, then enter the following command in the reply to that user's message.\n\nCommand: >d"
 
