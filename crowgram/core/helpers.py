@@ -23,6 +23,7 @@ misc_menu = [
     ],
     [
         Button.inline("Who", b'who'),
+        Button.inline("AFK", b'afk'),
         Button.inline("Updater", b'updater')
     ],
     [

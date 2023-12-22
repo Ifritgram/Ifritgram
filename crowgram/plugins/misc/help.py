@@ -72,7 +72,9 @@ async def help_response(event):
             elif button_data == b'logger':
                 await event.edit(utils.information.logger_usage, buttons=back_misc_menu)        
             elif button_data == b'who':
-                await event.edit(utils.information.who_usage, buttons=back_misc_menu)           
+                await event.edit(utils.information.who_usage, buttons=back_misc_menu)
+            elif button_data == b'afk':
+                await event.edit(utils.information.afk_usage, buttons=back_misc_menu)       
             elif button_data == b'updater':
                 await event.edit(utils.information.updater_usage, buttons=back_misc_menu)
             elif button_data == b'back_music':
