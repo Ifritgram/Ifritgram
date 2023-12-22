@@ -10,7 +10,7 @@ restricted_usage = "🔌 Plugin Name: Restricted\n\n📖 Description: It is poss
 
 logger_usage = "🔌 Plugin Name: Logger\n\n📖 Description: It is possible to keep logs of private messages and group messages.\n\n🪄 Usage: Crowgram will automatically log private messages and group messages; it requires mandatory log groups, or the logger will not work."
 
-who_usage = "🔌 Plugin Name: Who\n\n📖 Description: It is possible to know the previous name and previous username of any user.\n\n🪄 Usage: The following command should be used to reply to the message of the user who needs to know the information.\n\nCommand: >who"
+who_usage = "🔌 Plugin Name: Who\n\n📖 Description: It is possible to know the previous name and previous username of any user.\n\n🪄 Usage: The following command should be used in reply to any user's message or with Command.\n\nCommands: >who or >who user_id"
 
 updater_usage = "🔌 Plugin Name: Updater\n\n📖 Description: Any new update of Crowgram can actually be updated to the new version.\n\n🪄 Usage: It is possible to use the new version of Crowgram through the >update command."
 
