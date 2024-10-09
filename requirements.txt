@@ -1,4 +1,0 @@
-Telethon==1.33.1
-py-tgcalls==1.0.9
-youtube-search-python==1.6.6
-yt-dlp==2023.11.16

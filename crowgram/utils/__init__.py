@@ -1,1 +1,0 @@
-from utils.version import crowgram_version
