@@ -27,5 +27,5 @@ A powerful multi-featured userbot on Telegram.
 - Telegram Channel: [**`@Ifritgram`**](https://t.me/ifritgram)
 
 - Telegram Group: [**`@Ifritgram_Chat`**](https://t.me/ifritgram_chat)
-> [!IMPORTANT]
+> [!WARNING]
 > Verify the username of Ifritgram's official Telegram channel and group. If you face a problem with a fake channel or group, Ifritgram will not take responsibility for it, so I request that you verify Ifritgram's official Telegram channel and group.
