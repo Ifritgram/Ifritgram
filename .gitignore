@@ -1,2 +1,4 @@
 .env
+ifritgram.session
 venv
+__pycache__
