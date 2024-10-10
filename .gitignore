@@ -1,4 +1,5 @@
 .env
 ifritgram.session
 venv
+testenv
 __pycache__
