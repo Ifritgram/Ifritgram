@@ -8,7 +8,6 @@ def run_handlers():
         ifrit.add_event_handler(helper.execute_helper)
         ifrit.add_event_handler(helper.query_response)
         ifrit.add_event_handler(default.ping_the_server)
-        ifrit.add_event_handler(misc.get_self_destructive_media)
 
     ifritgram.start()
     print("Ifritgram Started")
