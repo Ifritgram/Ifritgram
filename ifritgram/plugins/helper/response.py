@@ -1,6 +1,7 @@
 import core.client
 from os import environ
-from utils import buttons, usages
+from utils import buttons
+from docsdata import usages
 from telethon import events
 
 ifritgram_bot = core.client.ifritgram_bot
