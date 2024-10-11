@@ -10,6 +10,5 @@ async def ping_the_server(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    ifritgram.parse_mode = "markdown"
     chat = event.to_id
     await ifritgram.send_message(chat, f"Pinged!\nLatency: {ms} ms")
