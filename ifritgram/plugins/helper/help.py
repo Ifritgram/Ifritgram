@@ -2,6 +2,7 @@ import core.client
 from os import environ
 from utils import buttons
 from telethon import events
+from telethon.errors.rpcerrorlist import ChatSendInlineForbiddenError
 
 ifritgram = core.client.ifritgram
 ifritgram_bot = core.client.ifritgram_bot
@@ -12,8 +13,13 @@ assistant_bot = environ["assistant_bot"]
 async def execute_helper(event):
     await event.delete()
     chat = event.chat_id
-    run_ifritgram_helper = await ifritgram.inline_query(f"{assistant_bot}", "help")
-    await run_ifritgram_helper[0].click(chat)
+    try:
+        run_ifritgram_helper = await ifritgram.inline_query(f"{assistant_bot}", "help")
+        await run_ifritgram_helper[0].click(chat)
+    except ChatSendInlineForbiddenError:
+        get_group_details = await ifritgram.get_entity(int(chat))
+        chat_name = get_group_details.title
+        await ifritgram.send_message(chat, f"Inline message sending is not allowed on {chat_name}. This is why it is not possible to display the Help menu in this chat.")
 
 @ifritgram_bot.on(events.InlineQuery)
 async def get_query(query):
