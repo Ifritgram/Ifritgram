@@ -1,1 +1,1 @@
-ping_usage = "Usage"
+ping_usage = "**Plugin Name**: Ping\n**Developer**: iniridwanul\n**License**: AGPL-3.0\n\nUsage:\n`/ping`\n\nThe ping command in Ifritgram is a tool used to measure the response time of the userbot to a given message. It essentially sends a test message and measures how long it takes the userbot to respond. This can be helpful for diagnosing issues with the userbot's responsiveness or for simply checking its status."
