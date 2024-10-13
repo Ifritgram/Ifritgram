@@ -5,6 +5,7 @@ from utils import buttons
 import docsdata
 from docsdata import usages
 from telethon import events
+from telethon.tl.custom import Button
 
 ifritgram_bot = core.client.ifritgram_bot
 owner = int(environ["owner"])
@@ -24,6 +25,8 @@ async def query_response(event):
                 await event.edit(f"{docsdata.misc}", buttons=show_misc_menu)
             elif button_data == b'main_menu':
                 await event.edit(f"🧞‍♂️ Ifritgram\n⚙️ Version: {utils.ifritgram_version}\nIfritgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=categories)
+            elif button_data == b'exit':
+                await event.edit(f"Congratulations to you.\nI hope you have read all the uses of Ifritgram. If you forget the magic of Ifritgram, you will come back here and read the magic. And enjoy the hidden power forbidden by Telegram.", buttons=Button.clear())
 
             elif button_data == b'ping':
                 await event.edit(usages.ping_usage, buttons=back_misc_menu, parse_mode="markdown")

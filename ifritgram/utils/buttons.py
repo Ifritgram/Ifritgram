@@ -5,7 +5,8 @@ categories_menu = [
         Button.inline("🧩 Misc", b'misc')
     ],
     [
-        Button.url("💬 Ifritgram Chat", url="https://t.me/ifritgram_chat")
+        Button.url("💬 Chat", url="https://t.me/ifritgram_chat"),
+        Button.inline("❌ Exit", b'exit')
     ]
 ]
 
