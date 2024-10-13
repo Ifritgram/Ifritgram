@@ -1,6 +1,8 @@
 import core.client
 from os import environ
+import utils
 from utils import buttons
+import docsdata
 from docsdata import usages
 from telethon import events
 
@@ -17,11 +19,11 @@ async def query_response(event):
         button_data = event.data
         if user_id == owner:
             if button_data == b'misc':
-                await event.edit(buttons=show_misc_menu)
+                await event.edit(f"{docsdata.misc}", buttons=show_misc_menu)
             elif button_data == b'back_misc':
-                await event.edit(f"Ifritgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=show_misc_menu)
+                await event.edit(f"{docsdata.misc}", buttons=show_misc_menu)
             elif button_data == b'main_menu':
-                await event.edit(buttons=categories)
+                await event.edit(f"🧞‍♂️ Ifritgram\n⚙️ Version: {utils.ifritgram_version}\nIfritgram's user manual is quite advanced, and the usage of all features is documented here.", buttons=categories)
 
             elif button_data == b'ping':
                 await event.edit(usages.ping_usage, buttons=back_misc_menu, parse_mode="markdown")
