@@ -1,0 +1,1 @@
+hindi_slangs = ["Slangs"]

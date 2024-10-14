@@ -1,5 +1,5 @@
 import core.client
-from plugins import default, helper
+from plugins import default, helper, fighter
 
 ifritgram = core.client.ifritgram
 
@@ -9,6 +9,10 @@ def run_handlers():
         ifrit.add_event_handler(helper.query_response)
         
         ifrit.add_event_handler(default.ping_the_server)
+
+        ifrit.add_event_handler(fighter.find_opponent)
+        ifrit.add_event_handler(fighter.remove_opponent)
+        ifrit.add_event_handler(fighter.chat_fight)
 
     ifritgram.start()
     print("Ifritgram Started")
