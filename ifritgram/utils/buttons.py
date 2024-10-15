@@ -12,8 +12,7 @@ categories_menu = [
 
 misc_menu = [
     [
-        Button.inline("Ping", b'ping'),
-        Button.inline("Timer", b'timer')
+        Button.inline("Ping", b'ping')
     ],
     [
         Button.inline("Main Menu", b'main_menu')
