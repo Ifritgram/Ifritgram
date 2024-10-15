@@ -11,20 +11,23 @@ owner = int(environ["owner"])
 
 @events.register(events.NewMessage(outgoing=True, pattern=r"\>so"))
 async def find_opponent(event):
-    await event.delete()
-    find_user = await event.get_reply_message()
-    user_id = find_user.sender_id
-    chat = event.to_id
-    message = await event.get_reply_message()
-    reply = message.id
-    get_first_name = await ifritgram(GetFullUserRequest(user_id))
-    first_name = get_first_name.users[0].first_name
-    if user_id not in opponent:
-        opponent.add(user_id)
-        ifritgram.parse_mode = "html"
-        await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> You are imprisoned in the eyes of Ifritgram. From now on, your forehead will start writing.", reply_to=reply)
-    else:
-        await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> This user has already been locked up in Ifritgram's jail.", reply_to=reply)
+    try:
+        await event.delete()
+        find_user = await event.get_reply_message()
+        user_id = find_user.sender_id
+        chat = event.to_id
+        message = await event.get_reply_message()
+        reply = message.id
+        get_first_name = await ifritgram(GetFullUserRequest(user_id))
+        first_name = get_first_name.users[0].first_name
+        if user_id not in opponent:
+            opponent.add(user_id)
+            ifritgram.parse_mode = "html"
+            await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> You are imprisoned in the eyes of Ifritgram. From now on, your forehead will start writing.", reply_to=reply)
+        else:
+            await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> This user has already been locked up in Ifritgram's jail.", reply_to=reply)
+    except:
+        pass
 
 @events.register(events.NewMessage(outgoing=True, pattern=r"\>ro"))
 async def remove_opponent(event):
