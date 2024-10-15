@@ -26,11 +26,14 @@ async def execute_helper(event):
 
 @ifritgram_bot.on(events.InlineQuery)
 async def get_query(query):
-    if query.text == "help":
-        categories = buttons.categories_menu
-        build_help_article = query.builder.article(
-            title = "Ifritgram",
-            text = f"🧞‍♂️ Ifritgram\n⚙️ Version: {utils.ifritgram_version}\nIfritgram's user manual is quite advanced, and the usage of all features is documented here.",
-            buttons = categories
-        )
-        await query.answer([build_help_article])
+    try:
+        if query.text == "help":
+            categories = buttons.categories_menu
+            build_help_article = query.builder.article(
+                title = "Ifritgram",
+                text = f"🧞‍♂️ Ifritgram\n⚙️ Version: {utils.ifritgram_version}\nIfritgram's user manual is quite advanced, and the usage of all features is documented here.",
+                buttons = categories
+            )
+            await query.answer([build_help_article])
+    except:
+        pass
