@@ -31,20 +31,23 @@ async def find_opponent(event):
 
 @events.register(events.NewMessage(outgoing=True, pattern=r"\>ro"))
 async def remove_opponent(event):
-    await event.delete()
-    find_user = await event.get_reply_message()
-    user_id = find_user.sender_id
-    chat = event.to_id
-    message = await event.get_reply_message()
-    reply = message.id
-    get_first_name = await ifritgram(GetFullUserRequest(user_id))
-    first_name = get_first_name.users[0].first_name
-    if user_id in opponent:
-        opponent.remove(user_id)
-        ifritgram.parse_mode = "html"
-        await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> Given a chance to start a new life, freed from Ifritgram's gaze.", reply_to=reply)
-    else:
-        await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> This user has already been released from Ifritgram jail.", reply_to=reply)
+    try:
+        await event.delete()
+        find_user = await event.get_reply_message()
+        user_id = find_user.sender_id
+        chat = event.to_id
+        message = await event.get_reply_message()
+        reply = message.id
+        get_first_name = await ifritgram(GetFullUserRequest(user_id))
+        first_name = get_first_name.users[0].first_name
+        if user_id in opponent:
+            opponent.remove(user_id)
+            ifritgram.parse_mode = "html"
+            await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> Given a chance to start a new life, freed from Ifritgram's gaze.", reply_to=reply)
+        else:
+            await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> This user has already been released from Ifritgram jail.", reply_to=reply)
+    except:
+        pass
 
 @events.register(events.NewMessage)
 async def chat_fight(event):
