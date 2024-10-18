@@ -9,6 +9,7 @@ def run_handlers():
         ifrit.add_event_handler(helper.query_response)
         
         ifrit.add_event_handler(default.ping_the_server)
+        ifrit.add_event_handler(default.set_helper)
 
         ifrit.add_event_handler(fighter.find_opponent)
         ifrit.add_event_handler(fighter.remove_opponent)
