@@ -67,5 +67,21 @@ async def chat_fight(event):
                         ifritgram.parse_mode = "html"
                         random_hindi_slangs = choice(slangs.hindi_slangs)
                         await ifritgram.send_message(user_id, f"<a href='tg://user?id={user_id}'>{first_name}</a> {random_hindi_slangs}", reply_to=reply)
+        elif event.is_group:
+            chat = event.to_id
+            user_id = event.from_id.user_id
+            sender = await event.get_sender()
+            sender_id = sender.id
+            reply = event.id
+            if opponent:
+                if user_id in opponent:
+                    if sender_id == owner:
+                        pass
+                    else:
+                        get_first_name = await ifritgram(GetFullUserRequest(user_id))
+                        first_name = get_first_name.users[0].first_name
+                        ifritgram.parse_mode = "html"
+                        random_hindi_slangs = choice(slangs.hindi_slangs)
+                        await ifritgram.send_message(chat, f"<a href='tg://user?id={user_id}'>{first_name}</a> {random_hindi_slangs}", reply_to=reply)
     except:
         pass
