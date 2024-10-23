@@ -15,8 +15,8 @@ A powerful multi-featured userbot on Telegram.
 <h2>About Ifritgram</h2>
 <p title="Ifritgram">Ifritgram is an open-source Telegram userbot developed by the Python programming language and Telethon MTProto, a client library of the Telegram API, a secure and reliable way to interact with the Telegram platform.</p>
 
-> [!IMPORTANT]
-> If you use Ifritgram, keep in mind that Ifritgram has and will continue to have many features that do not follow Telegram's policies. Hence, Telegram can also ban your account. For this reason, we recommend using a fake account to deploy Ifritgram.
+> [!WARNING]
+> Several features of Ifritgram violate Telegram's policy.
 
 <h2>Contributing</h2>
 <p title="Contributing">As Ifritgram is an open-source project, all kinds of contributions are respectfully welcomed, and I also extend my sincere thanks to all contributors.</p>
