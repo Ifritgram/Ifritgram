@@ -8,7 +8,7 @@ A powerful multi-featured userbot on Telegram.
 </p>
 
 <p align="center">
-<img src="assets/support.svg" alt="Support Chat"/>
+<img src="assets/support_chat.svg" alt="Support Chat"/>
 </p>
 
 <h2>About Ifritgram</h2>
