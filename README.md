@@ -20,12 +20,3 @@ A powerful multi-featured userbot on Telegram.
 
 <h2>Contributing</h2>
 <p title="Contributing">We are glad you have ideas to improve Ifritgram. We appreciate you helping the community with valuable contributions.</br><b>Rule</b>: When contributing to this repository, please first discuss the changes you wish to make via issue with the owner of this repository before making changes.</p>
-
-<h2>Support</h2>
-<p title="Support">You can join Ifritgram's official Telegram channel and group on Telegram for any Ifritgram updates and support-related issues.</p>
-
-- Telegram Channel: [**`@Ifritgram`**](https://t.me/ifritgram)
-
-- Telegram Group: [**`@Ifritgram_Chat`**](https://t.me/ifritgram_chat)
-> [!WARNING]
-> Verify the username of Ifritgram's official Telegram channel and group. If you face a problem with a fake channel or group, Ifritgram will not take responsibility for it, so I request that you verify Ifritgram's official Telegram channel and group.
