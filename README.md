@@ -8,7 +8,7 @@ A powerful multi-featured userbot on Telegram.
 </p>
 
 <p align="center">
-<img src="assets/maintained.svg" alt="Maintained"/>
+<img src="assets/support.svg" alt="Support Chat"/>
 <img src="assets/license.svg" alt="License"/>
 </p>
 
