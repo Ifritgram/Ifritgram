@@ -19,7 +19,7 @@ A powerful multi-featured userbot on Telegram.
 > Several features of Ifritgram violate Telegram's policy.
 
 <h2>Contributing</h2>
-<p title="Contributing">As Ifritgram is an open-source project, all kinds of contributions are respectfully welcomed, and I also extend my sincere thanks to all contributors.</p>
+<p title="Contributing">We are glad you have ideas to improve Ifritgram. We appreciate you helping the community with valuable contributions.</br><b>Rule</b>: When contributing to this repository, please first discuss the changes you wish to make via issue with the owner of this repository before making changes.</p>
 
 <h2>Support</h2>
 <p title="Support">You can join Ifritgram's official Telegram channel and group on Telegram for any Ifritgram updates and support-related issues.</p>
