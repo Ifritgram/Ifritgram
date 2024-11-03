@@ -1,0 +1,53 @@
+{
+    "name": "Ifritgram",
+    "description": "A powerful multi-featured userbot on Telegram.",
+    "logo": "https://raw.githubusercontent.com/Ifritgram/Ifritgram/refs/heads/master/assets/ifritgram.png",
+    "keywords": [
+      "userbot",
+      "plugins",
+      "productivity",
+      "fights"
+    ],
+    "repository": "https://github.com/Ifritgram/Ifritgram",
+    "env": {
+      "api_id": {
+        "description": "Get this value from my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "api_hash": {
+        "description": "Get this value from my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "string_session": {
+        "description": "Collect this value by executing python3 string_session.py",
+        "value": "",
+        "required": true
+      },
+      "ifritgram_gallery": {
+        "description": "Enter a Chat ID where your Self-Destruct Media will be stored.",
+        "value": "",
+        "required": true
+      },
+      "bot_token": {
+        "description": "A bot token is required to create inline buttons; go to @BotFather to create a bot to get a bot token.",
+        "value": "",
+        "required": true
+      },
+      "owner": {
+        "description": "The owner's user ID is required to verify the owner and give access to various features.",
+        "value": "",
+        "required": true
+      },
+      "assistant_bot": {
+        "description": "Enter the username of the bot you have created, with the help of which the help menu will be created.",
+        "value": "",
+        "required": true
+      }
+    },
+    "buildpacks": [{
+        "url": "heroku/python"
+      }
+    ]
+  }
