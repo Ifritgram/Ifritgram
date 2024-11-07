@@ -8,11 +8,22 @@ arch_linux(){
     echo -e "Dependencies have been successfully installed on Arch Linux to deploy Ifritgram"
 }
 
+debian_based(){
+    clear
+    echo -e "Installing dependencies on Debian/Debian based to deploy Ifritgram"
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get install -y python git
+    echo -e "Dependencies have been successfully installed on Debian/Debian based to deploy Ifritgram"
+}
+
 select_os(){
-    echo -e "Select OS:\n\n1. Arch Linux\n"
+    echo -e "Select OS:\n\n1. Arch Linux\n2. Debian/Debian Based\n"
     read -p "guest@ifritgram: " os
     if [ $os == "1" ]; then
         arch_linux
+    elif [ $os == "2" ]; then
+        debian_based
     else
         echo -e "Your preferred operating system is not supported by Ifritgram, or you have entered the wrong input"
         exit
