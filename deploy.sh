@@ -2,10 +2,10 @@
 
 arch_linux(){
     clear
-    echo -e "Installing dependencies on Arch Linux to deploy Ifritgram"
+    echo -e "Installing dependencies on Arch/Arch Based to deploy Ifritgram"
     sudo pacman -Syyu --noconfirm
     sudo pacman -S --noconfirm --needed python git
-    echo -e "Dependencies have been successfully installed on Arch Linux to deploy Ifritgram"
+    echo -e "Dependencies have been successfully installed on Arch/Arch based to deploy Ifritgram"
 }
 
 debian_based(){
