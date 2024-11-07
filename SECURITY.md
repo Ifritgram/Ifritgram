@@ -27,4 +27,5 @@ To help ensure the security of your Ifritgram Userbot, we recommend following th
  * Be Cautious with Third-Party Libraries: Use trusted and well-maintained libraries.
  * Secure API Keys and Tokens: Protect your API keys and tokens and avoid sharing them publicly.
 By following these guidelines, you can help maintain the security of your Telegram Userbot and protect your users' privacy.
+
 Thank you for your cooperation in helping us keep our project secure.
