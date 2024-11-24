@@ -17,6 +17,14 @@ debian_based(){
     echo -e "Dependencies have been successfully installed on Debian/Debian based to deploy Ifritgram"
 }
 
+fedora(){
+    clear
+    echo -e "Installing dependencies on Fedora to deploy Ifritgram"
+    sudo dnf update
+    sudo dnf install -y python git
+    echo -e "Dependencies have been successfully installed on Fedora to deploy Ifritgram"
+}
+
 termux(){
     clear
     echo -e "Installing dependencies on Termux to deploy Ifritgram"
@@ -27,13 +35,15 @@ termux(){
 }
 
 select_os(){
-    echo -e "Select OS:\n\n1. Arch Linux\n2. Debian/Debian Based\n3. Termux\n"
+    echo -e "Select OS:\n\n1. Arch/Arch Based\n2. Debian/Debian Based\n3. Fedora\n4. Termux\n"
     read -p "guest@ifritgram: " os
     if [ $os == "1" ]; then
         arch_linux
     elif [ $os == "2" ]; then
         debian_based
     elif [ $os == "3" ]; then
+        fedora
+    elif [ $os == "4" ]; then
         termux
     else
         echo -e "Your preferred operating system is not supported by Ifritgram, or you have entered the wrong input"
