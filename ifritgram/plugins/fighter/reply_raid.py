@@ -1,6 +1,8 @@
 import core.client
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.functions.messages import SetTypingRequest
+from telethon.types import SendMessageTypingAction
 from os import environ
 from random import choice
 from docsdata import slangs
@@ -54,6 +56,7 @@ async def chat_fight(event):
     try:
         if event.is_private:
             user_id = event.peer_id.user_id
+            await ifritgram(SetTypingRequest(user_id, SendMessageTypingAction()))
             sender = await event.get_sender()
             sender_id = sender.id
             reply = event.id
@@ -69,6 +72,7 @@ async def chat_fight(event):
                         await ifritgram.send_message(user_id, f"<a href='tg://user?id={user_id}'>{first_name}</a> {random_hindi_slangs}", reply_to=reply)
         elif event.is_group:
             chat = event.to_id
+            await ifritgram(SetTypingRequest(chat, SendMessageTypingAction()))
             user_id = event.from_id.user_id
             sender = await event.get_sender()
             sender_id = sender.id
