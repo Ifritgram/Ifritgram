@@ -1,1 +1,0 @@
-from .version import ifritgram_version
