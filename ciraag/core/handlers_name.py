@@ -6,6 +6,10 @@ class CiraagPlugins:
         self.misc_plugins = [
             "get_self_destructive_media"
         ]
+        self.helper_plugins = [
+            "execute_helper"
+        ]
 
 default_ciraag_plugins = CiraagPlugins().default_plugins
 misc_ciraag_plugins = CiraagPlugins().misc_plugins
+help_ciraag_plugins = CiraagPlugins().helper_plugins
