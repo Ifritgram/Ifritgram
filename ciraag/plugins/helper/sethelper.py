@@ -3,6 +3,7 @@ from ciraag.core.custom_handler import handler
 from ciraag.plugins.helper.setup_assistant import Helper
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
+from telethon.errors.rpcerrorlist import InviteRequestSentError
 
 @Ciraag(rf"\{handler}setup")
 async def set_helper(event):
@@ -17,11 +18,13 @@ async def set_helper(event):
 
     assistant = Helper()
     success = Message()
+    
     try:
         await assistant.processing()
+        await assistant.completed()
     except YouBlockedUserError:
         await ciraag(UnblockRequest(id="@BotFather"))
         await assistant.processing()
-
-    await assistant.completed()
+    except InviteRequestSentError:
+        pass
     await success.display()
